@@ -43,6 +43,11 @@ h3 {
   font-size: var(--title-font-size);
   font-weight: var(--title-font-weight);
 }
+.con {
+  width: 1600px;
+  height: auto;
+  margin: 0 auto;
+}
 
 /* 헤더시작 */
 header {
@@ -55,6 +60,11 @@ header {
   z-index: 999;
   border-bottom: 2px solid #f9f9f9;
   position: relative;
+}
+header .con {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 h1 {
   width: 123px;
@@ -88,9 +98,10 @@ h1 {
   display: none;
   z-index: 990;
   font-size: 16px;
-  height: 44px;
-  line-height: 1.5;
+  height: 80px;
+  line-height: 1.3;
   transition: 0.2s;
+  padding-top: 20px;
 }
 .submenu li {
   margin-top: 7px;
@@ -108,23 +119,44 @@ h1 {
 #gnb > ul > li .submenu li:hover a {
   color: var(--point-color);
 }
-#gnb > ul > li:hover .submenu::before {
-  content: "";
-  position: fixed;
+
+/* 2차메뉴 뒷배경 */
+#gnb::after {
+  content: "submenu-background";
+  font-size: 0;
+  width: 100vw;
+  height: 0;
+  position: absolute;
   top: 80px;
   left: 0;
-  width: 100vw;
-  height: 44px;
+  transition: 0.5s;
   background-color: #fff;
-  z-index: -10;
-  box-shadow: 0px 9px 12px -5px #00000038;
+  /* backdrop-filter: blur(10px); */
 }
-#gnb > ul > li .submenu li:hover a::after {
+#gnb:hover::after {
+  height: 80px;
+  border-bottom: 1px solid #ddd;
+}
+#gnb > ul > li .submenu li a {
+  transition: 0.3s;
+}
+#gnb > ul > li .submenu li > a {
+  position: relative;
+}
+#gnb > ul > li .submenu li > a::after {
   content: "밑줄";
   font-size: 0;
   display: block;
-  border-bottom: 2px solid var(--point-color);
-  padding-bottom: 1px;
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--point-color);
+  transition: 0.3s;
+}
+/* 2차메뉴 오버시 밑줄 */
+#gnb > ul > li .submenu li:hover a::after {
+  width: 100%;
 }
 /* chips (로그인, 마이페이지, 예약내역) */
 .header_chips {
