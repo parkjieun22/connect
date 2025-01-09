@@ -2,25 +2,6 @@
 @import url("./reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
-/* 스타일가이드 */
-:root {
-  --point-color: #0048fe;
-  --main-font-size: 18px;
-  --small-font-size: 14px;
-  --banner-big-font-size: 50px;
-  --banner-md-font-size: 30px;
-  --banner-sm-font-size: 20px;
-  --chips-font-size: 20px;
-  --sub-text-color: #999;
-  --sub-font-size: 22px;
-  --title-font-size: 26px;
-  --title-font-weight: 500;
-  --price-font-size: 28px;
-  --price-font-weight: 700;
-  --chips-padding: 10px 34px;
-}
-/* 스타일가이드 */
-
 body {
   font-family: "Noto Sans KR", sans-serif;
   color: #212121;
@@ -30,7 +11,6 @@ body {
 .container {
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 h2 {
   font-size: 40px;
@@ -43,60 +23,65 @@ h3 {
   font-size: var(--title-font-size);
   font-weight: var(--title-font-weight);
 }
+/* 공통영역 */
 .con {
   width: 1600px;
   height: auto;
   margin: 0 auto;
 }
 
-/* 헤더시작 */
 header {
   width: 100%;
   height: 80px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 160px;
-  box-sizing: border-box;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
-  border-bottom: 2px solid #f9f9f9;
-  position: relative;
+}
+header a {
+  color: #212121;
 }
 header .con {
-  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
 }
+
+/* 로고 */
 h1 {
   width: 123px;
-  height: 23px;
-  margin-top: 28px;
+  align-self: center;
 }
+
+/* 메뉴 */
 #gnb {
-  font-size: var(--main-font-size);
-  height: 80px;
-  font-weight: 500;
-}
-#gnb a {
-  color: #212121;
+  width: fit-content;
+  height: 100%;
 }
 #gnb > ul {
   width: fit-content;
-  height: 100%;
+  /* 마우스 올리면 2차메뉴 노출 되어야해서 auto */
+  height: auto;
   display: flex;
+  gap: 40px;
   line-height: 80px;
-  gap: 80px;
-  position: relative;
+  text-align: center;
 }
-#gnb > ul > li > a:hover {
-  color: var(--point-color);
+#gnb > ul > li {
+  /* fit-content 하면 글자 긴 애들은 2줄로 나와서 고정시킴 */
+  width: 100px;
+  position: relative;
+  /* background-color: yellow; */
 }
 
-/* 1차메뉴 오버시 밑줄 */
-/* #gnb > ul > li a {
+/* 밑줄 */
+#gnb > ul > li > a {
   transition: 0.3s;
   position: relative;
 }
-#gnb > ul > li a::after {
+#gnb > ul > li > a::after {
   content: "밑줄";
   font-size: 0;
   display: block;
@@ -110,76 +95,67 @@ h1 {
 }
 #gnb > ul > li:hover ::after {
   width: 100%;
-} */
+}
+/* 밑줄 */
 
-/* 2차메뉴 숨기기 */
-.submenu {
-  position: absolute;
-  left: 0;
-  width: fit-content;
-  display: none;
-  z-index: 990;
-  font-size: 16px;
-  height: 80px;
-  line-height: 1.3;
+#gnb > ul > li > a {
+  display: block;
   transition: 0.3s;
-  padding-top: 20px;
+  font-weight: 500;
 }
-.submenu li {
-  margin-top: 7px;
-}
-/* 2차메뉴 나타내기 */
-/* #gnb > ul > li > a {
-  transition: 0.3s;
-} */
-#gnb > ul > li:hover .submenu {
-  display: flex;
-  gap: 40px;
-  position: absolute;
-  left: 0;
-}
-#gnb > ul > li .submenu li:hover a {
+#gnb > ul > li:hover > a {
   color: var(--point-color);
 }
+/* 2차메뉴 */
+.submenu {
+  width: 100vw;
+  height: 0;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  transition: 0.5s;
+  /* 메인보다 더 위에 올라오게 하려고 z-index줌 */
+  z-index: 1000;
+  /* 2차메뉴 숨기기, height: 0 이라 히든하면 안보임 */
+  overflow: hidden;
+  display: flex;
+  gap: 40px;
+  /* background-color: yellowgreen; */
+}
+.submenu > li {
+  height: 100%;
+  width: fit-content;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  /* line-height: 1.5; */
+}
+.submenu > li > a {
+  display: block;
+  transition: 0.3s;
+}
+.submenu > li:hover > a {
+  color: var(--point-color);
+}
+#gnb > ul > li:hover .submenu {
+  height: 60px;
+}
 
-/* 2차메뉴 뒷배경 */
+/* submenu뒤의 전체 영역 배경 */
 #gnb::after {
   content: "submenu-background";
   font-size: 0;
   width: 100vw;
   height: 0;
   position: absolute;
-  top: 80px;
   left: 0;
-  transition: 0.4s;
-  background-color: #ffa1a1;
-  /* backdrop-filter: blur(10px); */
+  transition: 0.5s;
+  background-color: #fff;
 }
+/* #gnb에 마우스 오버시 ::after가 내려옴 */
 #gnb:hover::after {
-  height: 80px;
-  border-bottom: 1px solid #ddd;
+  height: 60px;
 }
-#gnb > ul > li .submenu li a {
-  transition: 0.3s;
-}
-#gnb > ul > li .submenu li > a {
-  position: relative;
-}
-#gnb > ul > li .submenu li > a::after {
-  content: "밑줄";
-  font-size: 0;
-  display: block;
-  position: absolute;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: var(--point-color);
-  transition: 0.3s;
-}
-/* 2차메뉴 오버시 밑줄 */
-#gnb > ul > li .submenu li:hover a::after {
-  width: 100%;
-}
+
 /* chips (로그인, 마이페이지, 예약내역) */
 .header_chips {
   width: fit-content;
