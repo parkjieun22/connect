@@ -5,22 +5,25 @@
 
 /* 스타일가이드 */
 :root {
-  --point-color: #0048fe;
-  --main-font-size: 18px;
-  --small-font-size: 14px;
-  --banner-big-font-size: 50px;
-  --banner-md-font-size: 30px;
-  --banner-sm-font-size: 20px;
-  --chips-font-size: 20px;
-  --sub-text-color: #999;
-  --sub-font-size: 22px;
-  --title-font-size: 26px;
-  --title-font-weight: 500;
+  /* 폰트사이즈, 행간 */
+  --xxxl-font-size: 46px;
+  --xxl-font-size: 28px;
+  --xl-font-size: 24px;
+  --lg-font-size: 22px;
+  --lg-line-height: 1.5;
+  --ml-font-size: 20px;
+  --md-font-size: 18px;
+  --xs-font-size: 14px;
   --price-font-size: 28px;
+
+  /* 컬러 */
+  --main-black: #212121;
+  --point-color: #0048fe;
+  --sub-text-color: #999;
+
+  /* 폰트두께 */
   --price-font-weight: 700;
-  --chips-padding: 10px 34px;
 }
-/* 스타일가이드 */
 
 html,
 body,
@@ -152,5 +155,6 @@ img {
 }
 a {
   text-decoration: none;
-  color: #212121;
+  color: var(--main-black);
+  font-size: var(--md-font-size);
 }
