@@ -5,7 +5,7 @@
 
 /* 스타일가이드 */
 :root {
-  /* 폰트사이즈, 행간 */
+  /* pc 폰트사이즈, 행간 */
   --xxxl-font-size: 46px;
   --xxl-font-size: 28px;
   --xl-font-size: 24px;
@@ -15,6 +15,17 @@
   --md-font-size: 18px;
   --xs-font-size: 14px;
   --price-font-size: 28px;
+
+  /* mo 폰트사이즈, 행간 */
+  --mo-xxxl-font-size: 46px;
+  --mo-xxl-font-size: 28px;
+  --mo-xl-font-size: 24px;
+  --mo-lg-font-size: 22px;
+  --mo-lg-line-height: 1.5;
+  --mo-ml-font-size: 18px;
+  --mo-md-font-size: 14px;
+  --mo-xs-font-size: 12px;
+  --mo-price-font-size: 18px;
 
   /* 컬러 */
   --main-black: #212121;

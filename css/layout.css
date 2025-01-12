@@ -181,21 +181,23 @@ h1 {
   color: #fff;
   border: 1px solid transparent;
 }
+.mobile_icon {
+  display: none;
+}
 /* 헤더 끝 */
 
 /* sec1 시작 */
 .sec1 {
   width: 100%;
-  height: 100%;
+  height: 800px;
   position: relative;
 }
 .sec1 > video {
   width: 100%;
-  height: 800px;
+  height: 100%;
   object-fit: cover;
   object-position: 0 -50px;
 }
-
 .sec1 > .left_text {
   position: absolute;
   width: 1600px;
@@ -217,8 +219,6 @@ h1 {
   margin-top: 60px;
   color: #fff;
   width: fit-content;
-}
-.sec1 > .left_text > p:last-of-type {
   color: #ffffff;
   border: 1px solid #fff;
   padding: 14px 30px;
@@ -269,6 +269,7 @@ h1 {
   border: 1px solid transparent;
 }
 
+/* sec2_content */
 .sec2_content_wrap {
   width: 1400px;
   height: fit-content;
@@ -280,9 +281,12 @@ h1 {
 .sec2_content_wrap h3 {
   margin-bottom: 22px;
 }
-
-/* sec2_content1 */
-.sec2_content1 {
+.sec2_content_wrap h3 br {
+  display: none;
+}
+.sec2_content1,
+.sec2_content2,
+.sec2_content3 {
   width: fit-content;
   height: fit-content;
   object-fit: cover;
@@ -298,8 +302,11 @@ h1 {
   font-size: var(--price-font-size);
   font-weight: var(--price-font-weight);
   color: var(--main-black);
+  width: fit-content;
 }
-
+.sec2_chips_wrap_mobile {
+  display: none;
+}
 /* sec2 끝 */
 
 /* sec3 시작 */
@@ -338,7 +345,6 @@ section:nth-child(3) {
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* background-color: turquoise; */
 }
 /* sec3 chips */
 .sec3_chips_wrap {
@@ -427,6 +433,9 @@ section:nth-child(3) {
 .sec4_left_wrap h3 a {
   color: var(--main-black);
 }
+.sec4_left_wrap h3 a br {
+  display: none;
+}
 .sec4_right_wrap {
   height: fit-content;
   width: fit-content;
@@ -445,7 +454,7 @@ section:nth-child(3) {
   box-sizing: border-box;
   font-size: var(--lg-font-size);
   padding: 14px 30px;
-  transition: 0.6s;
+  transition: 0.8s;
 }
 .sec4_right_wrap p:last-child:hover {
   background-color: var(--point-color);
@@ -500,7 +509,7 @@ section:nth-of-type(5) {
 .sec5_content:nth-of-type(3) img,
 .sec5_content:nth-of-type(4) img,
 .sec5_content:nth-of-type(5) img {
-  transition: 0.2s;
+  transition: 0.4s;
 }
 .sec5_content:nth-of-type(1) img:hover,
 .sec5_content:nth-of-type(2) img:hover,

@@ -185,6 +185,9 @@ h1 {
   color: #fff;
   border: 1px solid transparent;
 }
+.mobile_icon {
+  display: none;
+}
 /* 헤더 끝 */
 
 /* connect_talk sec1 시작 */
