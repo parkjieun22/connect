@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="con">
+          <!-- 로고 -->
+          <h1>
+            <a href="/"><img src="./img/connect_logo.svg" alt="로고" /></a>
+          </h1>
+          <!-- 메뉴 -->
+          <nav id="gnb">
+            <ul>
+              <!-- 메뉴1 -->
+              <li>
+                <a href="./connect_talk.html">커넥트톡</a>
+                <ul class="submenu">
+                  <li><a href="#">동행 구하기</a></li>
+                  <li><a href="#">교통/숙소 질문</a></li>
+                  <li><a href="#">일정 질문</a></li>
+                  <li><a href="#">맛집/핫플 추천</a></li>
+                  <li><a href="#">SOS</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴2 -->
+              <li>
+                <a href="./self_plan.html">셀프플랜</a>
+                <ul class="submenu">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">미주/캐나다</a></li>
+                  <li><a href="#">호주/뉴질랜드</a></li>
+                  <li><a href="#">중남미</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴3 -->
+              <li>
+                <a href="./simple_plan.html">간편플랜</a>
+                <ul class="submenu">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">미주/캐나다</a></li>
+                  <li><a href="#">호주/뉴질랜드</a></li>
+                  <li><a href="#">중남미</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴4 -->
+              <li>
+                <a href="./domestic_travel.html">국내여행</a>
+                <ul class="submenu">
+                  <li><a href="#">제주도</a></li>
+                  <li><a href="#">울릉도/독도</a></li>
+                  <li><a href="#">내륙</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴5 -->
+              <li>
+                <a href="./promotion.html">프로모션</a>
+                <ul class="submenu">
+                  <li><a href="#">진행 중인 이벤트</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- 아이콘 -->
+          <div class="header_chips">
+            <p><a href="./login.html">로그인</a></p>
+            <p><a href="#">마이페이지</a></p>
+            <p><a href="#">예약내역</a></p>
+          </div>
+          <div class="mobile_icon">
+            <a href="#"><i class="xi-user"></i></a>
+            <a href="#"><i class="xi-bars"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- sec1 -->
+        <section class="sec1">
+          <div class="sec1_box">
+            <div class="sec1_box_top">
+              <img src="./img/login/connect_logo_min.png" alt="미니로고" />
+              <h2>로그인</h2>
+            </div>
+            <div class="info_wrap">
+              <form action="#" method="post">
+                <!-- 아이디 -->
+                <div class="id">
+                  <label for="user_id">
+                    <input
+                      type="text"
+                      name="user_id"
+                      id="user_id"
+                      required
+                      placeholder="아이디"
+                      minlength="5"
+                      maxlength="12"
+                      autofocus
+                    />
+                  </label>
+                </div>
+
+                <!-- 비밀번호 -->
+                <div class="password">
+                  <label for="user_pw">
+                    <input
+                      type="password"
+                      name="user_pw"
+                      id="user_pw"
+                      required
+                      placeholder="비밀번호"
+                      minlength="6"
+                      maxlength="10"
+                    />
+                  </label>
+                </div>
+
+                <!-- 로그인상태 유지 체크박스 -->
+                <div class="login_check">
+                  <p><input type="checkbox" checked />로그인 상태 유지</p>
+                </div>
+
+                <!-- 아이디/비번 찾기 + 회원가입 -->
+                <div class="sign_up">
+                  <p><a href="#">아이디찾기</a></p>
+                  <p><a href="#">비밀번호찾기</a></p>
+                  <p><a href="#">회원가입</a></p>
+                </div>
+
+                <!-- 로그인버튼 -->
+                <div class="login_bt">
+                  <input type="submit" value="로그인" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- 푸터 -->
+      <footer>
+        <div class="footer_wrap">
+          <a href="#"
+            ><img src="./img/connect_logo_gray.png" alt="connect_logo_gray"
+          /></a>
+          <div class="footer_text_wrap">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">위치정보 이용약관</a>
+            <a href="#">접근성 안내</a>
+            <a href="#">공지사항</a>
+            <a href="#">사이버 윤리실</a>
+            <a href="#">고객센터</a>
+          </div>
+          <p>&copy; Connect Corp. All rights reserved</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

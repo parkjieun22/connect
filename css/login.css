@@ -1,0 +1,366 @@
+@charset "utf-8";
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* 공통설정 */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--main-black);
+  letter-spacing: -1px;
+  line-height: 1.3;
+}
+.container {
+  width: 100%;
+  height: auto;
+}
+h2 {
+  font-size: 34px;
+  font-weight: 600;
+}
+h3 > a {
+  font-size: var(--xl-font-size);
+  font-weight: 500;
+}
+.con {
+  width: 1400px;
+  height: auto;
+  margin: 0 auto;
+}
+p {
+  font-size: var(--ml-font-size);
+  color: var(--sub-text-color);
+}
+.sub_text {
+  color: var(--sub-text-color);
+  font-size: var(--ml-font-size);
+  margin-bottom: 22px;
+}
+/* ------------------------------공통설정끝------------------------------ */
+
+/* 헤더 */
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+header .con {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* 로고 */
+h1 {
+  width: 123px;
+  align-self: center;
+}
+/* 메뉴 */
+
+#gnb {
+  width: fit-content;
+  height: 100%;
+}
+#gnb > ul {
+  width: fit-content;
+  /* 마우스 올리면 2차메뉴 노출 되어야해서 auto */
+  height: auto;
+  display: flex;
+  gap: 40px;
+  line-height: 80px;
+  text-align: center;
+}
+#gnb > ul > li {
+  /* fit-content 하면 글자 긴 애들은 2줄로 나와서 고정시킴 */
+  width: 100px;
+  position: relative;
+}
+/* 밑줄 */
+#gnb > ul > li > a {
+  transition: 0.3s;
+  position: relative;
+}
+#gnb > ul > li > a::after {
+  content: "밑줄";
+  font-size: 0;
+  display: block;
+  position: absolute;
+  bottom: -50;
+  width: 0;
+  height: 2px;
+  background-color: var(--point-color);
+  transition: 0.3s;
+  z-index: 99;
+}
+#gnb > ul > li:hover ::after {
+  width: 100%;
+}
+/* 밑줄 */
+
+#gnb > ul > li > a {
+  display: block;
+  transition: 0.3s;
+  font-weight: 500;
+}
+#gnb > ul > li:hover > a {
+  color: var(--point-color);
+}
+/* 2차메뉴 */
+.submenu {
+  width: 100vw;
+  height: 0;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  transition: 0.5s;
+  /* 메인보다 더 위에 올라오게 하려고 z-index줌 */
+  z-index: 1000;
+  /* 2차메뉴 숨기기, height: 0 이라 히든하면 안보임 */
+  overflow: hidden;
+  display: flex;
+  gap: 40px;
+}
+.submenu > li {
+  height: 100%;
+  width: fit-content;
+}
+.submenu > li > a {
+  display: block;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+}
+.submenu > li:hover > a {
+  color: var(--point-color);
+}
+#gnb > ul > li:hover .submenu {
+  height: 60px;
+}
+
+/* submenu뒤의 전체 영역 배경 */
+#gnb::after {
+  content: "submenu-background";
+  font-size: 0;
+  width: 100vw;
+  height: 0;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+  background-color: #fff;
+}
+/* #gnb에 마우스 오버시 ::after가 내려옴 */
+#gnb:hover::after {
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+/* chips (로그인, 마이페이지, 예약내역) */
+.header_chips {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header_chips p > a {
+  font-size: var(--xs-font-size);
+  padding: 8px 20px;
+  border-radius: 50px;
+  background-color: #fff;
+  color: var(--point-color);
+  border: 1px solid var(--point-color);
+  transition: 0.2s;
+}
+.header_chips p:hover > a {
+  background-color: var(--point-color);
+  color: #fff;
+  border: 1px solid transparent;
+}
+.mobile_icon {
+  display: none;
+}
+/* ------------------------------헤더 끝------------------------------ */
+
+/* sec1 */
+.sec1 {
+  width: 100%;
+  height: auto;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 80px;
+}
+.sec1_box {
+  width: 700px;
+  height: 700px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 120px 600px;
+  box-shadow: 0 0 5px 5px #00000005;
+}
+.sec1_box_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.sec1_box_top img {
+  width: 54px;
+}
+.sec1_box_top h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* 로그인폼 */
+.info_wrap {
+  width: 400px;
+  height: auto;
+}
+/* 아이디칸 */
+.id {
+  border: 1px solid var(--sub-gray-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+label[for="user_id"] input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: var(--md-font-size);
+  font-weight: 300;
+}
+label[for="user_id"] input:focus {
+  color: var(var(--point-color));
+}
+
+/* 비밀번호 칸 */
+.password {
+  border: 1px solid var(--sub-gray-color);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+label[for="user_pw"] input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: var(--md-font-size);
+  font-weight: 300;
+}
+label[for="user_pw"] input:focus {
+  color: var(var(--point-color));
+}
+
+/* 로그인상태유지 */
+.login_check {
+  margin-bottom: 30px;
+}
+.login_check p {
+  font-size: var(--mo-md-font-size);
+  text-align: right;
+  font-weight: 350;
+}
+
+/* 찾기, 회원가입 */
+.sign_up {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.sign_up a {
+  color: var(--sub-text-color);
+  font-weight: 320;
+  font-size: var(--ms-font-size);
+}
+.sign_up p {
+  display: flex;
+  align-items: center;
+}
+.sign_up p:first-child::after {
+  content: "칸구분 세로선";
+  font-size: 0;
+  display: inline-block;
+  width: 1px;
+  height: 70%;
+  background-color: var(--sub-text-color);
+  margin-left: 20px;
+}
+.sign_up p:last-child::before {
+  content: "칸구분 세로선";
+  font-size: 0;
+  display: inline-block;
+  width: 1px;
+  height: 70%;
+  background-color: var(--sub-text-color);
+  margin-right: 20px;
+}
+
+/* 로그인버튼 */
+.login_bt input {
+  width: 100%;
+  height: 70px;
+  background-color: var(--point-color);
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: var(--ml-font-size);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login_bt input:hover {
+  background-color: #0035bd;
+}
+/* ------------------------------로그인폼 끝------------------------------ */
+
+/* ------------------------------sec1 끝------------------------------ */
+
+/* 푸터시작 */
+footer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  border-top: 1px solid #f9f9f9;
+  box-sizing: border-box;
+  font-weight: 320;
+  margin-top: 80px;
+}
+.footer_wrap {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_text_wrap {
+  display: flex;
+  gap: 40px;
+}
+.footer_text_wrap a {
+  color: var(--sub-text-color);
+  font-size: var(--xs-font-size);
+}
+footer p {
+  color: var(--sub-text-color);
+  font-size: var(--small-font-size);
+}
+/* ------------------------------푸터끝------------------------------ */
