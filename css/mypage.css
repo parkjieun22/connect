@@ -1,0 +1,304 @@
+@charset "utf-8";
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* 공통설정 */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--main-black);
+  letter-spacing: -1px;
+  line-height: 1.3;
+}
+.container {
+  width: 100%;
+  height: auto;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+h3 > a {
+  font-size: var(--xl-font-size);
+  font-weight: 500;
+}
+.con {
+  width: 1400px;
+  height: auto;
+  margin: 0 auto;
+}
+p {
+  font-size: var(--ml-font-size);
+  color: var(--sub-text-color);
+}
+.sub_text {
+  color: var(--sub-text-color);
+  font-size: var(--ml-font-size);
+  margin-bottom: 22px;
+}
+/* 공통설정끝 */
+
+/* 헤더 */
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+header .con {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* 로고 */
+h1 {
+  width: 123px;
+  align-self: center;
+}
+/* 메뉴 */
+
+#gnb {
+  width: fit-content;
+  height: 100%;
+}
+#gnb > ul {
+  width: fit-content;
+  /* 마우스 올리면 2차메뉴 노출 되어야해서 auto */
+  height: auto;
+  display: flex;
+  gap: 40px;
+  line-height: 80px;
+  text-align: center;
+}
+#gnb > ul > li {
+  /* fit-content 하면 글자 긴 애들은 2줄로 나와서 고정시킴 */
+  width: 100px;
+  position: relative;
+}
+/* 밑줄 */
+#gnb > ul > li > a {
+  transition: 0.3s;
+  position: relative;
+}
+#gnb > ul > li > a::after {
+  content: "밑줄";
+  font-size: 0;
+  display: block;
+  position: absolute;
+  bottom: -50;
+  width: 0;
+  height: 2px;
+  background-color: var(--point-color);
+  transition: 0.3s;
+  z-index: 99;
+}
+#gnb > ul > li:hover ::after {
+  width: 100%;
+}
+/* 밑줄 */
+
+#gnb > ul > li > a {
+  display: block;
+  transition: 0.3s;
+  font-weight: 500;
+}
+#gnb > ul > li:hover > a {
+  color: var(--point-color);
+}
+/* 2차메뉴 */
+.submenu {
+  width: 100vw;
+  height: 0;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  transition: 0.5s;
+  /* 메인보다 더 위에 올라오게 하려고 z-index줌 */
+  z-index: 1000;
+  /* 2차메뉴 숨기기, height: 0 이라 히든하면 안보임 */
+  overflow: hidden;
+  display: flex;
+  gap: 40px;
+}
+.submenu > li {
+  height: 100%;
+  width: fit-content;
+}
+.submenu > li > a {
+  display: block;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+}
+.submenu > li:hover > a {
+  color: var(--point-color);
+}
+#gnb > ul > li:hover .submenu {
+  height: 60px;
+}
+
+/* submenu뒤의 전체 영역 배경 */
+#gnb::after {
+  content: "submenu-background";
+  font-size: 0;
+  width: 100vw;
+  height: 0;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+  background-color: #fff;
+}
+/* #gnb에 마우스 오버시 ::after가 내려옴 */
+#gnb:hover::after {
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+/* chips (로그인, 마이페이지, 예약내역) */
+.header_chips {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header_chips p > a {
+  font-size: var(--xs-font-size);
+  padding: 8px 20px;
+  border-radius: 50px;
+  background-color: #fff;
+  color: var(--point-color);
+  border: 1px solid var(--point-color);
+  transition: 0.2s;
+}
+.header_chips p:hover > a {
+  background-color: var(--point-color);
+  color: #fff;
+  border: 1px solid transparent;
+}
+.mobile_icon {
+  display: none;
+}
+/* ---------------------------------헤더 끝--------------------------------- */
+
+main {
+  padding: 200px 0;
+}
+
+/* sec1 시작 */
+.sec1 {
+  top: 80px;
+  width: 1500px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.top_text {
+  margin: 0 auto;
+  width: 1440px;
+  box-sizing: border-box;
+}
+.top_text_button {
+  display: flex;
+  gap: 20px;
+}
+.top_text h2 {
+  margin-bottom: 20px;
+}
+.top_text a {
+  padding: 10px 20px;
+  background-color: var(--sub-text-color);
+  border-radius: 10px;
+  color: #fff;
+  transition: 0.2s;
+}
+.top_text a:hover {
+  background-color: var(--point-color);
+}
+.top_text::after {
+  content: "구분선";
+  font-size: 0;
+  display: block;
+  width: 1500px;
+  height: 1px;
+  background-color: var(--sub-text-color);
+  margin-top: 30px;
+  /* 1500px의 절반을 빼서 중앙에 맞추기 */
+  margin-left: calc(50% - 750px);
+}
+/* ---------------------------------sec1 끝--------------------------------- */
+
+/* sec2 시작 */
+.sec2 {
+  width: 1040px;
+  background-color: antiquewhite;
+  margin: 0 auto;
+  margin-top: 160px;
+}
+
+/* 왼쪽박스 */
+.left_box {
+  width: 320px;
+  background-color: #e9ffe9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user_info_1 {
+  text-align: center;
+}
+.user_img {
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background: url(../img/mypage/mypage_user.png) no-repeat #f9f9f9 center center;
+}
+.user_img img {
+  display: none;
+}
+
+/* 오른쪽박스 */
+.right_box {
+  width: 700px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.box_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+/* ---------------------------------sec2 끝--------------------------------- */
+
+/* 푸터시작 */
+footer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  border-top: 1px solid #f9f9f9;
+  box-sizing: border-box;
+  font-weight: 320;
+}
+.footer_wrap {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_text_wrap {
+  display: flex;
+  gap: 40px;
+}
+.footer_text_wrap a {
+  color: var(--sub-text-color);
+  font-size: var(--xs-font-size);
+}
+footer p {
+  color: var(--sub-text-color);
+  font-size: var(--small-font-size);
+}
+/* 푸터끝 */
