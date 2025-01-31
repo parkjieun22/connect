@@ -171,4 +171,5 @@ a {
   text-decoration: none;
   color: var(--main-black);
   font-size: var(--md-font-size);
+  display: block;
 }
