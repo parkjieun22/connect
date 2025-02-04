@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CONNECT</title>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="../css/mypage.css" />
     <link
       rel="stylesheet"
@@ -23,7 +31,7 @@
             <ul>
               <!-- 메뉴1 -->
               <li>
-                <a href="./sub/connect_talk.html">커넥트톡</a>
+                <a href="./connect_talk.html">커넥트톡</a>
                 <ul class="submenu">
                   <li><a href="#">동행 구하기</a></li>
                   <li><a href="#">교통/숙소 질문</a></li>
@@ -35,7 +43,7 @@
 
               <!-- 메뉴2 -->
               <li>
-                <a href="./sub/self_plan.html">셀프플랜</a>
+                <a href="./self_plan.html">셀프플랜</a>
                 <ul class="submenu">
                   <li><a href="#">아시아</a></li>
                   <li><a href="#">유럽</a></li>
@@ -48,7 +56,7 @@
 
               <!-- 메뉴3 -->
               <li>
-                <a href="./sub/simple_plan.html">간편플랜</a>
+                <a href="./simple_plan.html">간편플랜</a>
                 <ul class="submenu">
                   <li><a href="#">아시아</a></li>
                   <li><a href="#">유럽</a></li>
@@ -61,7 +69,7 @@
 
               <!-- 메뉴4 -->
               <li>
-                <a href="./sub/domestic_travel.html">국내여행</a>
+                <a href="./domestic_travel.html">국내여행</a>
                 <ul class="submenu">
                   <li><a href="#">제주도</a></li>
                   <li><a href="#">울릉도/독도</a></li>
@@ -71,7 +79,7 @@
 
               <!-- 메뉴5 -->
               <li>
-                <a href="./sub/promotion.html">프로모션</a>
+                <a href="./promotion.html">프로모션</a>
                 <ul class="submenu">
                   <li><a href="#">진행 중인 이벤트</a></li>
                 </ul>
@@ -83,7 +91,7 @@
           <div class="header_chips">
             <p><a href="./login.html">로그인</a></p>
             <p><a href="./mypage.html">마이페이지</a></p>
-            <p><a href="#">예약내역</a></p>
+            <!-- <p><a href="#">예약내역</a></p> -->
           </div>
           <div class="mobile_icon">
             <a href="#"><i class="xi-user"></i></a>
@@ -198,7 +206,10 @@
 
               <!-- 예약내역 -->
               <div class="reservation_list">
-                <h2>예약내역</h2>
+                <div class="reservation_list_text">
+                  <h2>예약내역</h2>
+                  <a href="#">더 보기</a>
+                </div>
                 <div class="reservation">
                   <div class="reservation_info_wrap">
                     <a href="#"
@@ -242,7 +253,11 @@
 
               <!-- 관심상품 -->
               <div class="wish_list">
-                <h2>관심상품</h2>
+                <div class="wish_list_text">
+                  <h2>관심상품</h2>
+                  <a href="#">더 보기</a>
+                </div>
+
                 <div class="wish_list_wrap">
                   <div class="wish">
                     <a href="#"
@@ -251,7 +266,7 @@
                         alt="파리 3대 성 투어"
                     /></a>
                     <p>프랑스</p>
-                    <a href="#">파리 근교 3대 성 당일 투어</a>
+                    <a href="#">파리 근교 3대 성 당일 투어 (8시간)</a>
                     <p>270,000원</p>
                   </div>
 
@@ -280,11 +295,21 @@
 
         <!-- 하단 광고배너 -->
         <section class="sec3">
-          <div class="banner_wrap">
-            <div class="banner">
-              <img src="../img/mypage/banner1.jpg" alt="배너" />
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- 슬라이드1 -->
+              <div class="swiper-slide">
+                <img src="../img/mypage/banner1.jpg" alt="" />
+              </div>
+              <!-- 슬라이드2 -->
+              <div class="swiper-slide">
+                <img src="../img/mypage/banner2.jpg" alt="" />
+              </div>
             </div>
           </div>
+          <!-- 네비게이션 버튼 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </section>
       </main>
 
@@ -307,5 +332,8 @@
         </div>
       </footer>
     </div>
+
+    <!-- js -->
+    <script src="../js/mypage.js"></script>
   </body>
 </html>
