@@ -353,16 +353,19 @@ h1 {
   width: fit-content;
   margin: 0 auto;
   display: flex;
-  gap: 20px;
-  line-height: 14px;
+  gap: 10px;
   color: var(--sub-text-color);
   margin-top: 120px;
+  align-items: center;
+}
+.page a img {
+  width: 14px;
 }
 .page a {
   font-size: var(--xs-font-size);
   color: var(--sub-text-color);
 }
-.page a:nth-of-type(1) {
+.page a:nth-of-type(2) {
   color: var(--point-color);
   font-weight: 600;
 }
