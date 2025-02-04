@@ -133,7 +133,7 @@
   .sec2_chips_wrap_mobile {
     display: flex;
     flex-wrap: wrap;
-    width: clamp(95%, 60vw, 70vw);
+    width: clamp(80%, 60vw, 60vw);
     margin: 40px auto;
     gap: 8px;
     justify-content: center;
@@ -155,7 +155,6 @@
     color: #fff;
     border: 1px solid transparent;
   }
-
   .sec2_content_wrap {
     width: 100%;
     flex-wrap: wrap;
