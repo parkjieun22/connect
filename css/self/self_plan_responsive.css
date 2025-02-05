@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url("./reset.css");
-@import url("./connect_talk.css");
+@import url("./simple_plan.css");
 
 /* 모바일 */
 /* @media screen and (min-width: 320px) and (max-width: 768px) */
@@ -67,7 +67,7 @@
     object-fit: none;
     margin-top: 0;
     position: absolute;
-    transform: translateX(-720px);
+    /* transform: translateX(-720px); */
   }
   .sec1_wrap .left_text {
     top: 50%;
@@ -84,65 +84,78 @@
 
   /* sec2 */
   .sec2_wrap {
-    width: 90%;
+    width: 95%;
     margin: 100px auto;
-    gap: 20px;
   }
-  .sec2_wrap h2 {
-    margin-bottom: 50px;
+  .sec2_menu {
+    display: flex;
   }
-  .sec2_chips_wrap {
-    gap: 8px;
-    margin-bottom: 50px;
-  }
-  .sec2_chips_wrap a {
-    padding: 10px 14px;
-    margin-bottom: 8px;
-    font-size: var(--mo-md-font-size);
-  }
-  .sec2_edit {
-    font-size: var(--mo-md-font-size);
-  }
-  .post_box {
-    height: fit-content;
-    margin-bottom: 20px;
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-  .post_user_img {
-    width: 100px;
-    height: 100px;
-  }
-  .post_box_chips {
-    margin: 0 auto;
-    gap: 4px;
-  }
-  .post_box_chips > p {
-    font-size: 12px;
-    padding: 4px 8px;
-  }
-  .post_box_text {
-    margin: 0 auto;
-  }
-  .post_box_text > p {
-    padding: 4px 0;
-    font-size: var(--mo-md-font-size);
-  }
-  .post_box_button {
+  .sec2_menu a {
+    border-radius: 26px;
     padding: 10px 20px;
+    width: fit-content;
   }
-  .post_box_button a {
-    color: #fff;
+  .sec2_menu_wrap {
+    gap: 8px;
+    margin-top: 40px;
+  }
+  .sec2_menu_text span:last-child {
+    display: none;
+  }
+  .sec2_menu_text span:first-child {
     font-size: var(--mo-md-font-size);
+    font-weight: 600;
   }
-  .post_box_button {
-    margin: 0 auto;
-  }
-  .post_box_text h3 {
-    font-size: var(--ml-font-size);
+  .sec2_menu a img {
+    width: 30px;
+    display: none;
   }
   /* --------------------sec2 끝-------------------- */
+
+  /* sec3 */
+  .sec3_wrap {
+    width: 95%;
+    margin: 100px auto;
+  }
+  .sec3_best h3 {
+    margin-bottom: 10px;
+    font-size: var(--mo-ml-font-size);
+  }
+  .sec3_menu_wrap {
+    display: none;
+  }
+  .sec3_best_wrap {
+    width: 100%;
+    gap: 4px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .sec3_best_content {
+    width: clamp(46vw, 220px, 45vw);
+    height: clamp(46vw, 200px, 40vw);
+    box-sizing: border-box;
+  }
+  .sec3_best_content img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  .sec3_best_wrap_text p:last-child {
+    font-size: clamp(12px, 14px, 20px);
+  }
+  .sec3_best_wrap_text p:first-child {
+    font-size: clamp(10px, 14px, 18px);
+  }
+  .sec3_best_wrap_text {
+    bottom: 8px;
+    left: 8px;
+  }
+
+  /* --------------------sec3 끝-------------------- */
+
+  .sec4_wrap {
+    display: none;
+  }
 
   /* 푸터 */
   .footer_wrap {
