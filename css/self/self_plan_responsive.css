@@ -159,11 +159,11 @@
     font-size: var(--mo-ml-font-size);
   }
   .sec4_fav_wrap {
-    gap: 8px;
+    gap: 4px;
   }
   .sec4_fav_content {
     /* width: 120px; */
-    width: 130px;
+    width: 140px;
     height: 200px;
   }
   .sec4_fav_content img {

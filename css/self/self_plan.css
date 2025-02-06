@@ -400,7 +400,7 @@ h1 {
   display: flex;
   overflow: hidden;
   flex-wrap: wrap;
-  justify-content: spa;
+  justify-content: space-between;
   gap: 40px;
   padding: 0 10px 10px 10px;
   box-sizing: border-box;
