@@ -159,11 +159,11 @@
     font-size: var(--mo-ml-font-size);
   }
   .sec4_fav_wrap {
-    gap: 4px;
+    gap: 10px;
   }
   .sec4_fav_content {
-    /* width: 120px; */
-    width: 140px;
+    width: clamp(130px, 40vw, 220px);
+
     height: 200px;
   }
   .sec4_fav_content img {
@@ -173,8 +173,7 @@
     display: none;
   }
   .sec4_fav_content_text {
-    padding: 10px;
-    width: 100%;
+    padding: 20px;
   }
   .sec4_fav_content_text a > p:first-child {
     margin-bottom: 6px;
@@ -183,12 +182,10 @@
   }
   .sec4_fav_content_text a > p:nth-child(2) {
     font-size: var(--mo-md-font-size);
-    width: 95%;
     margin: 0 auto;
   }
   .sec4_fav_content_text a > p:last-child {
     font-size: var(--mo-price-font-size);
-    text-align: end;
   }
 
   /* --------------------sec4 끝-------------------- */
