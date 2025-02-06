@@ -94,6 +94,7 @@
     border-radius: 26px;
     padding: 10px 20px;
     width: fit-content;
+    cursor: grab;
   }
   .sec2_menu_wrap {
     gap: 8px;
@@ -107,9 +108,9 @@
     font-weight: 600;
   }
   .sec2_menu a img {
-    width: 30px;
     display: none;
   }
+
   /* --------------------sec2 끝-------------------- */
 
   /* sec3 */
@@ -132,31 +133,71 @@
   }
   .sec3_best_content {
     width: clamp(46vw, 220px, 45vw);
-    height: clamp(46vw, 200px, 40vw);
-    box-sizing: border-box;
-  }
-  .sec3_best_content img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-  }
-  .sec3_best_wrap_text p:last-child {
-    font-size: clamp(12px, 14px, 20px);
-  }
-  .sec3_best_wrap_text p:first-child {
-    font-size: clamp(10px, 14px, 18px);
+    height: clamp(30vw, 200px, 40vw);
   }
   .sec3_best_wrap_text {
-    bottom: 8px;
-    left: 8px;
+    left: 6px;
+    transform: translateY(center);
   }
-
+  .sec3_best_wrap_text p:last-child {
+    /* 가격 */
+    font-size: clamp(10px, 16px, 20px);
+  }
+  .sec3_best_wrap_text p:first-child {
+    /* 상품명 */
+    font-size: clamp(8px, 14px, 18px);
+  }
   /* --------------------sec3 끝-------------------- */
 
+  /* sec4 */
   .sec4_wrap {
+    width: 95%;
+    margin: 100px auto;
+  }
+  .sec4_wrap h3 {
+    margin-bottom: 10px;
+    font-size: var(--mo-ml-font-size);
+  }
+  .sec4_fav_wrap {
+    gap: 8px;
+  }
+  .sec4_fav_content {
+    /* width: 120px; */
+    width: 130px;
+    height: 200px;
+  }
+  .sec4_fav_content img {
+    height: 80px;
+  }
+  .sec4_fav_content .detail_box {
     display: none;
   }
+  .sec4_fav_content_text {
+    padding: 10px;
+    width: 100%;
+  }
+  .sec4_fav_content_text a > p:first-child {
+    margin-bottom: 6px;
+    letter-spacing: 0;
+    font-size: 10px;
+  }
+  .sec4_fav_content_text a > p:nth-child(2) {
+    font-size: var(--mo-md-font-size);
+    width: 95%;
+    margin: 0 auto;
+  }
+  .sec4_fav_content_text a > p:last-child {
+    font-size: var(--mo-price-font-size);
+    text-align: end;
+  }
 
+  /* --------------------sec4 끝-------------------- */
+
+  /* 페이지버튼 */
+  .page {
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
   /* 푸터 */
   .footer_wrap {
     height: 180px;

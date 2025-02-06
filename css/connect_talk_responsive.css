@@ -144,6 +144,11 @@
   }
   /* --------------------sec2 끝-------------------- */
 
+  /* 페이지버튼 */
+  .page {
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
   /* 푸터 */
   .footer_wrap {
     height: 180px;
@@ -308,6 +313,7 @@
     font-size: var(--ml-font-size);
   }
   /* --------------------sec2 끝-------------------- */
+
   /* 푸터 */
   .footer_wrap {
     height: 180px;
