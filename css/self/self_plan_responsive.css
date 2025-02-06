@@ -220,14 +220,6 @@
   }
 }
 
-@media screen and (min-width: 712px) and (max-width: 768px) {
-  .sec2_chips_wrap {
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 50px;
-  }
-}
-
 /* 테블릿 */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   /* 공통설정 */
@@ -252,11 +244,13 @@
   .sub_text br {
     display: none;
   }
+
   /* 헤더 */
   header {
     width: 90%;
     position: static;
     margin: 0 auto;
+    background-color: yellowgreen;
   }
   header .con {
     width: 100%;
@@ -276,12 +270,6 @@
     gap: 16px;
     justify-content: center;
     align-items: center;
-  }
-  .mobile_icon i {
-    font-size: 28px;
-    width: fit-content;
-    height: fit-content;
-    padding: 4px;
   }
   /* -------------------------헤더 끝------------------------- */
 
@@ -317,48 +305,58 @@
     width: 90%;
     margin: 100px auto;
   }
-  .sec2_chips_wrap {
-    gap: 10px;
-    margin-bottom: 50px;
+  .sec2_menu a {
+    width: 260px;
+    border-radius: 28px;
+    padding: 22px 28px;
   }
-  .sec2_wrap h2 {
-    margin-bottom: 50px;
+  .sec2_menu a img {
+    width: 44px;
   }
-  .sec2_chips_wrap a {
-    padding: 10px 24px;
-    margin-bottom: 8px;
+  .sec2_menu_text span:first-child {
+    font-size: var(--mo-ml-font-size);
+    font-weight: 600;
   }
-  .sec2_edit {
+  .sec2_menu_text span:last-child {
     font-size: var(--mo-md-font-size);
-  }
-  .post_user_img {
-    width: 110px;
-    height: 110px;
-  }
-  .post_box {
-    height: 160px;
-  }
-  .post_box_chips > p {
-    font-size: 12px;
-  }
-  .post_box_text > p {
-    padding: 4px 0;
-    font-size: var(--mo-md-font-size);
-  }
-  .post_box_button {
-    padding: 10px 20px;
-  }
-  .post_box_button a {
-    color: #fff;
-    font-size: var(--mo-md-font-size);
-  }
-  .post_box_button {
-    margin-left: auto;
-  }
-  .post_box_text h3 {
-    font-size: var(--ml-font-size);
   }
   /* --------------------sec2 끝-------------------- */
+  /* sec3 */
+  .sec3_wrap {
+    width: 90%;
+  }
+  .sec3_menu a {
+    font-size: var(--ms-font-size);
+    padding: 10px 16px;
+  }
+  .sec3_best_wrap {
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .sec3_best_content {
+    width: clamp(48vw, 240px, 46vw);
+    height: clamp(30vw, 220px, 40vw);
+    background-color: violet;
+    justify-content: space-between;
+  }
+  .sec3_best_content img {
+    height: 100%;
+  }
+  .sec3_best_wrap_text {
+    left: 10px;
+    transform: translateY(center);
+  }
+  .sec3_best_wrap_text p:last-child {
+    /* 가격 */
+    font-size: clamp(16px, 18px, 20px);
+  }
+  .sec3_best_wrap_text p:first-child {
+    /* 상품명 */
+    font-size: clamp(14px, 16px, 20px);
+  }
+
+  /* --------------------sec3 끝-------------------- */
   /* 푸터 */
   .footer_wrap {
     height: 180px;

@@ -281,8 +281,6 @@ h1 {
 }
 .sec2_menu a:hover {
   border: 1px solid var(--point-color);
-  /* border: 1px solid #fff;
-  box-shadow: 0 0 10px 0px #0048fe50; */
 }
 .sec2_menu a:hover .sec2_menu_text span:first-child {
   color: var(--point-color);
