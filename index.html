@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CONNECT</title>
+    <!-- 제이쿼리 -->
+    <script src="./js/jquery.min.js"></script>
+
+    <!-- css -->
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/layout_responsive.css" />
   </head>
@@ -15,7 +19,73 @@
           <h1>
             <a href="/"><img src="./img/connect_logo.svg" alt="로고" /></a>
           </h1>
-          <!-- 메뉴 -->
+          <!-- 모바일 햄버거 메뉴 -->
+          <nav id="hamburger-menu">
+            <ul>
+              <!-- 메뉴1 -->
+              <li>
+                <a href="./sub/connect_talk.html">커넥트톡</a>
+                <ul class="submenu">
+                  <li><a href="#">동행 구하기</a></li>
+                  <li><a href="#">교통/숙소 질문</a></li>
+                  <li><a href="#">일정 질문</a></li>
+                  <li><a href="#">맛집/핫플 추천</a></li>
+                  <li><a href="#">SOS</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴2 -->
+              <li>
+                <a href="./sub/self_plan.html">셀프플랜</a>
+                <ul class="submenu">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">미주/캐나다</a></li>
+                  <li><a href="#">호주/뉴질랜드</a></li>
+                  <li><a href="#">중남미</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴3 -->
+              <li>
+                <a href="./sub/simple_plan.html">간편플랜</a>
+                <ul class="submenu">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">미주/캐나다</a></li>
+                  <li><a href="#">호주/뉴질랜드</a></li>
+                  <li><a href="#">중남미</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴4 -->
+              <li>
+                <a href="./sub/domestic_travel.html">국내여행</a>
+                <ul class="submenu">
+                  <li><a href="#">제주도</a></li>
+                  <li><a href="#">울릉도/독도</a></li>
+                  <li><a href="#">내륙</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴5 -->
+              <li>
+                <a href="./sub/promotion.html">프로모션</a>
+                <ul class="submenu">
+                  <li><a href="#">진행 중인 이벤트</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- <div>
+              <div>메뉴1</div>
+              <div>메뉴2</div>
+              <div>메뉴3</div>
+            </div> -->
+          </nav>
+
+          <!-- pc 기본 메뉴 -->
           <nav id="gnb">
             <ul>
               <!-- 메뉴1 -->
@@ -83,14 +153,14 @@
             <!-- <p><a href="#">예약내역</a></p> -->
           </div>
           <div class="mobile_icon">
-            <a href="#"
+            <a href="./sub/login.html"
               ><img
                 src="./img/user.png"
                 width="30px"
                 style="height: auto"
                 alt="로그인"
             /></a>
-            <a href="#"
+            <a href="#" id="hamburger-icon"
               ><img
                 src="./img/menu.png"
                 width="24px"
@@ -436,5 +506,8 @@
         </div>
       </footer>
     </div>
+
+    <!-- js -->
+    <script src="./js/index.js"></script>
   </body>
 </html>

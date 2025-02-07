@@ -342,9 +342,8 @@ h1 {
 }
 .sec3_best_content img {
   width: 100%;
-  /* height: 100%; */
   transition: 0.5s;
-  object-fit: fill;
+  object-fit: cover;
   object-position: center center;
 }
 .sec3_best_content img:hover {
@@ -385,7 +384,6 @@ h1 {
   height: auto;
   margin: 0 auto;
   margin-top: 120px;
-  /* background-color: #9198e5; */
 }
 .sec4_wrap h3 {
   font-size: var(--xl-font-size);
@@ -426,7 +424,6 @@ h1 {
 }
 .sec4_fav_content_text a {
   width: 100%;
-  /* background-color: lavender; */
 }
 .sec4_fav_content_text a > p:first-child {
   margin-bottom: 14px;

@@ -225,18 +225,7 @@
   .header_chips p {
     display: none;
   }
-  .mobile_icon {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-  }
-  .mobile_icon i {
-    font-size: 28px;
-    width: fit-content;
-    height: fit-content;
-    padding: 4px;
-  }
+
   /* -------------------------헤더 끝------------------------- */
 
   /* sec1 */

@@ -58,8 +58,8 @@ h1 {
   width: 123px;
   align-self: center;
 }
-/* 메뉴 */
 
+/* 메뉴 */
 #gnb {
   width: fit-content;
   height: 100%;
@@ -182,6 +182,42 @@ h1 {
 .mobile_icon {
   display: none;
 }
+
+/* 모바일 햄버거 버튼 */
+#hamburger-menu {
+  z-index: 9999;
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  width: 60%;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 50px;
+  box-sizing: border-box;
+}
+#hamburger-menu ul > li {
+  display: flex;
+  align-items: center;
+}
+#hamburger-menu ul > li::after {
+  content: "세모";
+  font-size: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-left: auto;
+  margin-top: 8px;
+  border: solid var(--main-black);
+  border-width: 1px 1px 0 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+#hamburger-menu ul > li:not(#hamburger-menu ul > li:last-child) {
+  margin-bottom: 30px;
+}
+
+/* ============== 햄버거 버튼 끝 ============== */
+
 /* 헤더 끝 */
 
 /* sec1 시작 */
@@ -189,6 +225,7 @@ h1 {
   width: 100%;
   height: 800px;
   position: relative;
+  overflow: hidden;
 }
 .sec1 > video {
   width: 100%;
