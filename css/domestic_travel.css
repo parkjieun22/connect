@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url("./reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
 /* 공통설정 */
 body {
   font-family: "Noto Sans KR", sans-serif;
@@ -13,12 +14,8 @@ body {
   height: auto;
 }
 h2 {
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 600;
-}
-h3 {
-  font-size: var(--lg-font-size);
-  font-weight: 500;
 }
 h3 > a {
   font-size: var(--xl-font-size);
@@ -32,7 +29,6 @@ h3 > a {
 p {
   font-size: var(--ml-font-size);
   color: var(--sub-text-color);
-  line-height: var(--lg-line-height);
 }
 .sub_text {
   color: var(--sub-text-color);
@@ -45,7 +41,7 @@ p {
 header {
   width: 100%;
   height: 80px;
-  background-color: #ffffff;
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -62,6 +58,7 @@ h1 {
   width: 123px;
   align-self: center;
 }
+
 /* 메뉴 */
 #gnb {
   width: fit-content;
@@ -80,7 +77,6 @@ h1 {
   /* fit-content 하면 글자 긴 애들은 2줄로 나와서 고정시킴 */
   width: 100px;
   position: relative;
-  /* background-color: yellow; */
 }
 /* 밑줄 */
 #gnb > ul > li > a {
@@ -161,7 +157,6 @@ h1 {
   border-bottom: 1px solid #ddd;
   box-sizing: border-box;
 }
-
 /* chips (로그인, 마이페이지, 예약내역) */
 .header_chips {
   width: fit-content;
@@ -187,7 +182,59 @@ h1 {
 .mobile_icon {
   display: none;
 }
-/* -------------------------헤더 끝------------------------- */
+
+/* 모바일 햄버거 버튼 */
+#hamburger-menu {
+  z-index: 9999;
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  width: 260px;
+  height: 323px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 50px 0;
+  box-sizing: border-box;
+  border-radius: 30px 0 0 30px;
+}
+#hamburger-menu ul {
+  width: 60%;
+  margin: 0 auto;
+}
+#hamburger-menu ul > li {
+  display: flex;
+  align-items: center;
+}
+#hamburger-menu ul > li a {
+  font-size: var(--ms-font-size);
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  color: var(--sub-text-color);
+  transition: 0.3s;
+}
+#hamburger-menu ul > li a:hover {
+  color: var(--main-black);
+  font-weight: 700;
+}
+#hamburger-menu ul > li::after {
+  content: "세모";
+  font-size: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-left: auto;
+  margin-top: 8px;
+  border: solid var(--main-black);
+  border-width: 1px 1px 0 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+#hamburger-menu ul > li:not(#hamburger-menu ul > li:last-child) {
+  margin-bottom: 30px;
+}
+
+/* ============== 햄버거 버튼 끝 ============== */
+
+/* 헤더 끝 */
 
 /*sec1 시작 */
 .sec1_wrap {
@@ -238,6 +285,7 @@ h1 {
 .sec2_wrap {
   width: 1100px;
   margin: 200px auto;
+  overflow: hidden;
 }
 .sec2_wrap h2 {
   text-align: center;
@@ -280,8 +328,6 @@ h1 {
 }
 .sec2_menu a:hover {
   border: 1px solid var(--point-color);
-  /* border: 1px solid #fff;
-  box-shadow: 0 0 10px 0px #0048fe50; */
 }
 .sec2_menu a:hover .sec2_menu_text span:first-child {
   color: var(--point-color);
@@ -290,14 +336,14 @@ h1 {
 /* --------------------sec2 끝-------------------- */
 
 /* sec3 */
+.sec3_wrap {
+  width: 1100px;
+  margin: 0 auto;
+}
 .sec3_best h3 {
   font-size: var(--xl-font-size);
   font-weight: 700;
   margin-bottom: 20px;
-}
-.sec3_wrap {
-  width: 1100px;
-  margin: 0 auto;
 }
 .sec3_menu_wrap {
   text-align: center;
@@ -306,6 +352,24 @@ h1 {
 }
 .sec3_menu_wrap h2 {
   margin-bottom: 26px;
+}
+.sec3_menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.sec3_menu a {
+  width: fit-content;
+  font-size: var(--md-font-size);
+  padding: 10px 20px;
+  background-color: var(--sub-text-color);
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.sec3_menu a:hover {
+  background-color: var(--point-color);
+  color: #fff;
 }
 .sec3_best_wrap {
   width: 1100px;
@@ -316,18 +380,25 @@ h1 {
 }
 .sec3_best_content {
   width: 540px;
-  height: 430px;
+  height: 360px;
   position: relative;
   overflow: hidden;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
 }
 .sec3_best_content img {
-  width: 540px;
-  height: 430px;
+  width: 100%;
   transition: 0.5s;
   object-fit: cover;
+  object-position: center center;
 }
 .sec3_best_content img:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
+}
+.sec3_best_wrap_text {
+  position: relative;
+  left: 35px;
 }
 .sec3_best_wrap_text p {
   color: #fff;
@@ -340,19 +411,18 @@ h1 {
 .sec3_best_wrap_text p:first-child {
   font-size: var(--xl-font-size);
 }
-.sec3_best_wrap_text {
-  position: absolute;
-  bottom: 24px;
-  left: 35px;
-}
 .text_box {
   background-color: #00000098;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 124px;
+  height: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
+
 /* --------------------sec3 끝-------------------- */
 
 /* sec4 */
@@ -361,7 +431,6 @@ h1 {
   height: auto;
   margin: 0 auto;
   margin-top: 120px;
-  /* background-color: #9198e5; */
 }
 .sec4_wrap h3 {
   font-size: var(--xl-font-size);
@@ -374,27 +443,34 @@ h1 {
   display: flex;
   overflow: hidden;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 40px;
   padding: 0 10px 10px 10px;
   box-sizing: border-box;
 }
 .sec4_fav_content {
-  width: fit-content;
-  height: fit-content;
+  width: 333px;
+  height: 410px;
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   position: relative;
   background-color: #fff;
 }
 .sec4_fav_content img {
-  width: 333px;
+  width: 100%;
   height: 240px;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
 .sec4_fav_content_text {
-  padding: 34px 0 34px 30px;
+  padding: 34px 30px;
   box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
+  margin-top: auto;
+}
+.sec4_fav_content_text a {
+  width: 100%;
 }
 .sec4_fav_content_text a > p:first-child {
   margin-bottom: 14px;
@@ -466,17 +542,20 @@ h1 {
   width: fit-content;
   margin: 0 auto;
   display: flex;
-  gap: 20px;
-  line-height: 14px;
+  gap: 10px;
   color: var(--sub-text-color);
   margin-top: 120px;
+  align-items: center;
   margin-bottom: 200px;
+}
+.page a img {
+  width: 14px;
 }
 .page a {
   font-size: var(--xs-font-size);
   color: var(--sub-text-color);
 }
-.page a:nth-of-type(1) {
+.page a:nth-of-type(2) {
   color: var(--point-color);
   font-weight: 600;
 }

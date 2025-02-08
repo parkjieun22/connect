@@ -3,7 +3,6 @@
 @import url("./connect_talk.css");
 
 /* 모바일 */
-/* @media screen and (min-width: 320px) and (max-width: 768px) */
 @media screen and (max-width: 768px) {
   /* 모바일 공통설정 */
   header,
@@ -16,7 +15,7 @@
     overflow: hidden;
   }
   h2 {
-    font-size: var(--mo-lg-font-size);
+    font-size: 24px;
   }
   .sub_text {
     color: var(--sub-text-color);
@@ -41,6 +40,7 @@
   h1 {
     width: 120px;
   }
+
   #gnb {
     display: none;
   }
@@ -53,7 +53,8 @@
     justify-content: center;
     align-items: center;
   }
-  /* -------------------------헤더 끝------------------------- */
+
+  /* =============== 헤더끝 ===============*/
 
   /* sec1 */
   .sec1_wrap {
@@ -206,6 +207,7 @@
   .sub_text br {
     display: none;
   }
+
   /* 헤더 */
   header {
     width: 90%;
@@ -225,7 +227,16 @@
   .header_chips p {
     display: none;
   }
-
+  .mobile_icon {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  /* 햄버거 버튼 */
+  #hamburger-menu {
+    display: none; /* 햄버거 메뉴 표시 */
+  }
   /* -------------------------헤더 끝------------------------- */
 
   /* sec1 */
@@ -334,6 +345,12 @@
     margin-bottom: 50px;
   }
 }
+@media screen and (max-width: 1024px) {
+  /* 햄버거 버튼 */
+  #hamburger-menu {
+    display: none; /* 햄버거 메뉴 표시 */
+  }
+}
 
 /* 테블릿 ~ PC */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
@@ -361,30 +378,17 @@
   }
 
   /* 헤더 */
-  header .con {
+  header {
     width: 90%;
+    position: static;
+    margin: 0 auto;
   }
-  #gnb > ul > li {
-    width: 70px;
+  header .con {
+    width: 100%;
+    box-sizing: border-box;
   }
-  #gnb > ul > li > a {
-    font-size: var(--md-font-size);
-  }
-  /* chips (로그인, 마이페이지, 예약내역) */
-  .header_chips {
-    display: none;
-  }
-  .mobile_icon {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-  }
-  .mobile_icon i {
-    font-size: 28px;
-    width: fit-content;
-    height: fit-content;
-    padding: 4px;
+  h1 {
+    width: 120px;
   }
   /* 헤더 끝 */
 
@@ -486,6 +490,30 @@
     font-size: var(--mo-xs-font-size);
   }
 }
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* 헤더 */
+  h1 {
+    width: 120px;
+  }
+  .submenu {
+    display: none;
+  }
+  #gnb:hover {
+    border: none;
+  }
+  #gnb > ul > li {
+    width: 80px;
+  }
+  #gnb > ul > li a {
+    font-size: 16px;
+  }
+  .header_chips p > a {
+    padding: 6px 12px;
+  }
+  /* 헤더 끝 */
+}
+
 @media screen and (min-width: 1190px) and (max-width: 1440px) {
   .sec1_banner_user {
     top: 14%;

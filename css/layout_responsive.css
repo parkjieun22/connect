@@ -55,11 +55,6 @@
     align-items: center;
   }
 
-  /* 햄버거 버튼 */
-  #hamburger-menu {
-    display: none; /* 햄버거 메뉴 표시 */
-  }
-
   /* =============== 헤더끝 ===============*/
 
   /* sec1 */
@@ -373,16 +368,21 @@
   .sec6 {
     padding: 60px 0;
   }
-  .sec6_content {
-    width: 46%;
-  }
   .sec6_content_wrap {
     width: 80%;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
+  }
+  .sec6_content {
+    width: 100%;
+  }
+  .sec6_text {
+    width: 90%;
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    /* gap: 20px; */
+    align-items: baseline;
+    margin: 0 auto;
   }
   .sec6_content_img {
     width: 100%;
@@ -390,28 +390,25 @@
     object-fit: cover;
     background-color: #f9f9f9;
   }
-  .sec6_content_img img {
-    width: 60%;
+  .sec6_content_img a img {
+    width: 90px;
+    margin-left: 40px;
   }
   .sec6_content_img a {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-start;
+    margin-right: 20px;
   }
-  .sec6_content:nth-of-type(1) .sec6_content_img a {
-    background-size: auto 14px;
-  }
-  .sec6_content:nth-of-type(2) .sec6_content_img a {
-    background-size: auto 14px;
-  }
-  .sec6_content:nth-of-type(3) .sec6_content_img a {
-    background-size: auto 14px;
-  }
+  .sec6_content:nth-of-type(1) .sec6_content_img a,
+  .sec6_content:nth-of-type(2) .sec6_content_img a,
+  .sec6_content:nth-of-type(3) .sec6_content_img a,
   .sec6_content:nth-of-type(4) .sec6_content_img a {
-    background-size: auto 14px;
+    background-size: auto 15px;
+    background-position-y: center;
+    background-position-x: 86%;
   }
+
   .sec6_text p {
     font-size: var(--mo-xs-font-size);
     margin: 0;
@@ -420,7 +417,7 @@
   .sec6_text h3 a {
     font-size: var(--mo-md-font-size);
     font-weight: 600;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   }
 
   /* 푸터 */
@@ -502,6 +499,7 @@
   #hamburger-menu {
     display: none; /* 햄버거 메뉴 표시 */
   }
+  /* -------------------------헤더 끝------------------------- */
 
   /* sec1 */
   .sec1 {
@@ -881,6 +879,13 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  /* 햄버거 버튼 */
+  #hamburger-menu {
+    display: none; /* 햄버거 메뉴 표시 */
+  }
+}
+
 /* 테블릿 ~ PC */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
   /* 공통설정 */
@@ -919,23 +924,6 @@
   h1 {
     width: 120px;
   }
-  #gnb {
-    display: none;
-  }
-  .header_chips p {
-    display: none;
-  }
-  .mobile_icon {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-  }
-  /* 햄버거 버튼 */
-  #hamburger-menu {
-    display: none; /* 햄버거 메뉴 표시 */
-  }
-
   /* 헤더 끝 */
 
   /* sec1 시작 */
@@ -1283,6 +1271,29 @@
     color: var(--sub-text-color);
     font-size: var(--mo-xs-font-size);
   }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* 헤더 */
+  h1 {
+    width: 120px;
+  }
+  .submenu {
+    display: none;
+  }
+  #gnb:hover {
+    border: none;
+  }
+  #gnb > ul > li {
+    width: 80px;
+  }
+  #gnb > ul > li a {
+    font-size: 16px;
+  }
+  .header_chips p > a {
+    padding: 6px 12px;
+  }
+  /* 헤더 끝 */
 }
 
 /* PC */
