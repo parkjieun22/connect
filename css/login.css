@@ -14,7 +14,7 @@ body {
   height: auto;
 }
 h2 {
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 600;
 }
 h3 > a {
@@ -35,13 +35,13 @@ p {
   font-size: var(--ml-font-size);
   margin-bottom: 22px;
 }
-/* ------------------------------공통설정끝------------------------------ */
+/* 공통설정끝 */
 
 /* 헤더 */
 header {
   width: 100%;
   height: 80px;
-  background-color: #ffffff;
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,8 +58,8 @@ h1 {
   width: 123px;
   align-self: center;
 }
-/* 메뉴 */
 
+/* 메뉴 */
 #gnb {
   width: fit-content;
   height: 100%;
@@ -182,7 +182,57 @@ h1 {
 .mobile_icon {
   display: none;
 }
-/* ------------------------------헤더 끝------------------------------ */
+
+/* 모바일 햄버거 버튼 */
+#hamburger-menu {
+  z-index: 9999;
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  width: 260px;
+  height: 323px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 50px 0;
+  box-sizing: border-box;
+  border-radius: 30px 0 0 30px;
+}
+#hamburger-menu ul {
+  width: 60%;
+  margin: 0 auto;
+}
+#hamburger-menu ul > li {
+  display: flex;
+  align-items: center;
+}
+#hamburger-menu ul > li a {
+  font-size: var(--ms-font-size);
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  color: var(--sub-text-color);
+  transition: 0.3s;
+}
+#hamburger-menu ul > li a:hover {
+  color: var(--main-black);
+  font-weight: 700;
+}
+#hamburger-menu ul > li::after {
+  content: "세모";
+  font-size: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-left: auto;
+  margin-top: 8px;
+  border: solid var(--main-black);
+  border-width: 1px 1px 0 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+#hamburger-menu ul > li:not(#hamburger-menu ul > li:last-child) {
+  margin-bottom: 30px;
+}
+
+/* ============== 햄버거 버튼 끝 ============== */
 
 /* sec1 */
 .sec1 {

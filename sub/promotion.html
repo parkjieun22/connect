@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>프로모션</title>
+    <!-- 제이쿼리 -->
+    <script src="./js/jquery.min.js"></script>
+
+    <!-- css -->
     <link rel="stylesheet" href="../css/promotion.css" />
+    <link rel="stylesheet" href="../css/promotion_responsive.css" />
   </head>
   <body>
     <div class="container">
@@ -14,7 +19,68 @@
           <h1>
             <a href="/"><img src="../img/connect_logo.svg" alt="로고" /></a>
           </h1>
-          <!-- 메뉴 -->
+          <!-- 모바일 햄버거 메뉴 -->
+          <nav id="hamburger-menu">
+            <ul>
+              <!-- 메뉴1 -->
+              <li>
+                <a href="./connect_talk.html">커넥트톡</a>
+                <ul class="submenu">
+                  <li><a href="#">동행 구하기</a></li>
+                  <li><a href="#">교통/숙소 질문</a></li>
+                  <li><a href="#">일정 질문</a></li>
+                  <li><a href="#">맛집/핫플 추천</a></li>
+                  <li><a href="#">SOS</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴2 -->
+              <li>
+                <a href="./self_plan.html">셀프플랜</a>
+                <ul class="submenu">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">미주/캐나다</a></li>
+                  <li><a href="#">호주/뉴질랜드</a></li>
+                  <li><a href="#">중남미</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴3 -->
+              <li>
+                <a href="./simple_plan.html">간편플랜</a>
+                <ul class="submenu">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">미주/캐나다</a></li>
+                  <li><a href="#">호주/뉴질랜드</a></li>
+                  <li><a href="#">중남미</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴4 -->
+              <li>
+                <a href="./domestic_travel.html">국내여행</a>
+                <ul class="submenu">
+                  <li><a href="#">제주도</a></li>
+                  <li><a href="#">울릉도/독도</a></li>
+                  <li><a href="#">내륙</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴5 -->
+              <li>
+                <a href="./promotion.html">프로모션</a>
+                <ul class="submenu">
+                  <li><a href="#">진행 중인 이벤트</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- pc 기본 메뉴 -->
           <nav id="gnb">
             <ul>
               <!-- 메뉴1 -->
@@ -82,14 +148,14 @@
             <!-- <p><a href="#">예약내역</a></p> -->
           </div>
           <div class="mobile_icon">
-            <a href="#"
+            <a href="./login.html"
               ><img
                 src="../img/user.png"
                 width="30px"
                 style="height: auto"
                 alt="로그인"
             /></a>
-            <a href="#"
+            <a href="#" id="hamburger-icon"
               ><img
                 src="../img/menu.png"
                 width="24px"
@@ -102,7 +168,6 @@
 
       <!-- 메인 sec들 -->
       <main>
-        <!-- connect_talk sec1 -->
         <section>
           <div class="sec1_wrap">
             <div class="right_text">
@@ -123,6 +188,11 @@
               <a href="#sec2">결제/무이자 혜택</a>
               <a href="#sec3">개별 여행 상품 결제 혜택</a>
               <a href="#sec4">추가 적립 혜택</a>
+            </div>
+            <div class="sec_text_mobile">
+              <a href="#sec2">결제/무이자</a>
+              <a href="#sec3">개별 여행 상품</a>
+              <a href="#sec4">추가 적립</a>
             </div>
 
             <div class="sec_box_wrap">
@@ -240,6 +310,11 @@
               <a href="#sec3">개별 여행 상품 결제 혜택</a>
               <a href="#sec4">추가 적립 혜택</a>
             </div>
+            <div class="sec_text_mobile">
+              <a href="#sec2">결제/무이자</a>
+              <a href="#sec3">개별 여행 상품</a>
+              <a href="#sec4">추가 적립</a>
+            </div>
 
             <div class="sec_box_wrap">
               <!-- 박스1 -->
@@ -261,7 +336,7 @@
               <!-- 박스2 -->
               <div class="sec_box">
                 <div class="text_area">
-                  <p>태국 당일 투어 예약시<br />선착순50명 1만원 즉시 할인</p>
+                  <p>태국 당일 투어 예약시<br />선착순 50명 1만원 즉시 할인</p>
                 </div>
                 <a href="#">
                   <img
@@ -292,7 +367,7 @@
               <!-- 박스4 -->
               <div class="sec_box">
                 <div class="text_area">
-                  <p>매일 정오 선착순 100명!<br />단 1회 20,000원 할인</p>
+                  <p>매일 정오 선착순 100명! <br />단 1회 20,000원 할인</p>
                 </div>
                 <a href="#">
                   <img
@@ -312,6 +387,11 @@
               <a href="#sec2">결제/무이자 혜택</a>
               <a href="#sec3">개별 여행 상품 결제 혜택</a>
               <a href="#sec4">추가 적립 혜택</a>
+            </div>
+            <div class="sec_text_mobile">
+              <a href="#sec2">결제/무이자</a>
+              <a href="#sec3">개별 여행 상품</a>
+              <a href="#sec4">추가 적립</a>
             </div>
 
             <div class="sec_box_wrap">
@@ -401,5 +481,8 @@
         </div>
       </footer>
     </div>
+
+    <!-- js -->
+    <script src="../js/hamburger_menu.js"></script>
   </body>
 </html>
