@@ -624,7 +624,7 @@ main {
   position: relative;
   border-radius: 20px;
 }
-.swiper-container {
+.swiper {
   width: 100%;
   height: 100%;
 }
@@ -632,7 +632,7 @@ main {
   width: 100%;
   height: 100%;
 }
-.banner img {
+.swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
