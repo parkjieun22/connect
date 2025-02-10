@@ -88,8 +88,8 @@
     margin-bottom: 10px;
   }
   .user_img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-size: 50%;
   }
   .user_info_2,
@@ -120,6 +120,9 @@
   .toggle_btn {
     width: 10px;
     height: 10px;
+  }
+  .toggle_check:checked ~ .toggle_item .toggle_btn {
+    left: 18px;
   }
 
   .logout a {
@@ -277,7 +280,8 @@
     width: 14px;
   }
 }
-@media screen and (min-width: 500px) {
+
+@media screen and (min-width: 510px) {
   .left_box {
     flex-direction: row;
     flex-wrap: wrap;
@@ -438,6 +442,9 @@
   .toggle_btn {
     width: 10px;
     height: 10px;
+  }
+  .toggle_check:checked ~ .toggle_item .toggle_btn {
+    left: 18px;
   }
 
   .logout {
@@ -687,7 +694,7 @@
 
   /* 왼쪽박스 */
   .left_box {
-    width: 260px;
+    width: 280px;
     background-color: #ffffff;
     border-radius: 20px;
     display: flex;
@@ -804,6 +811,10 @@
     background-color: var(--sub-text-color);
     margin: 0 10px;
     vertical-align: middle;
+  }
+
+  .right_box {
+    width: 660px;
   }
 
   .mileage {
