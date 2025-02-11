@@ -270,6 +270,16 @@ h1 {
   z-index: 99;
   text-align: right;
 }
+.right_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.sec1_wrap .right_text img {
+  width: fit-content;
+  margin-top: auto;
+}
 .sec1_wrap .right_text h2 {
   font-size: 32px;
   margin-bottom: 10px;

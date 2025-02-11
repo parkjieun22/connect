@@ -68,7 +68,9 @@
     object-fit: none;
     margin-top: 0;
     position: absolute;
-    /* transform: translateX(-720px); */
+  }
+  .sec1_wrap .left_text img {
+    display: none;
   }
   .sec1_wrap .left_text {
     top: 50%;
@@ -249,6 +251,10 @@
     object-fit: cover;
     margin-top: 0;
   }
+  .sec1_wrap .left_text img {
+    width: 24vw;
+    margin-top: auto;
+  }
   .sec1_wrap .left_text h2 {
     margin-bottom: 10px;
     font-size: clamp(3vw, 30px, 4vw);
@@ -406,6 +412,7 @@
     object-fit: cover;
     margin-top: 0;
   }
+
   .sec1_wrap .left_text h2 {
     margin-bottom: 10px;
     font-size: clamp(3vw, 30px, 4vw);

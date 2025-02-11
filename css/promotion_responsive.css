@@ -70,6 +70,9 @@
     position: absolute;
     transform: translateX(-720px);
   }
+  .sec1_wrap .left_text img {
+    display: none;
+  }
   .sec1_wrap .right_text {
     top: 50%;
   }
@@ -244,6 +247,10 @@
     height: 100%;
     object-fit: cover;
     margin-top: 0;
+  }
+  .sec1_wrap .right_text img {
+    width: 24vw;
+    margin-top: auto;
   }
   .sec1_wrap .right_text h2 {
     margin-bottom: 10px;

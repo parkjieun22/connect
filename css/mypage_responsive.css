@@ -258,7 +258,7 @@
     font-size: var(--mo-xs-font-size);
   }
 }
-@media screen and (min-width: 390px) {
+@media screen and (min-width: 390px) and (max-width: 768px) {
   .wish {
     width: 25vw;
   }

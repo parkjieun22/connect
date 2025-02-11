@@ -258,6 +258,15 @@ h1 {
   left: 50%;
   z-index: 99;
 }
+.left_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec1_wrap .left_text img {
+  width: fit-content;
+  margin-top: auto;
+}
 .sec1_wrap .left_text h2 {
   font-size: 32px;
   margin-bottom: 10px;
