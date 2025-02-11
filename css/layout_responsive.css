@@ -444,6 +444,16 @@
     font-size: var(--mo-xs-font-size);
   }
 }
+@media screen and (max-width: 415px) {
+  .sec2_chips_wrap_mobile {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 416px) and (max-width: 465px) {
+  .sec2_chips_wrap_mobile {
+    width: 80%;
+  }
+}
 
 /* 테블릿 */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
