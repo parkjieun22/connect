@@ -281,7 +281,7 @@
   }
 }
 
-@media screen and (min-width: 510px) {
+@media screen and (min-width: 510px) and (max-width: 644px) {
   .left_box {
     flex-direction: row;
     flex-wrap: wrap;
@@ -298,10 +298,7 @@
   }
 }
 
-@media screen and (min-width: 645px) {
-  .left_box {
-    padding: 60px 80px;
-  }
+@media screen and (min-width: 645px) and (max-width: 768px) {
   .info_bottom {
     width: 50%;
   }
@@ -586,10 +583,28 @@
   }
 }
 
+@media screen and (min-width: 887px) and (max-width: 1024px) {
+  .left_box {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px 140px;
+    box-sizing: border-box;
+    /* gap: 60px; */
+  }
+  .info_bottom {
+    width: 55%;
+    margin-left: 100px;
+  }
+  .logout {
+    margin-top: 20px;
+  }
+}
+
 /* 테블릿 ~ PC */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* 모바일 공통설정 */
-  header,
+  /* 공통설정 */
   .sec1,
   .sec2,
   .sec3,
@@ -599,16 +614,17 @@
     overflow: hidden;
   }
   h2 {
-    font-size: 24px;
+    font-size: 22px;
+  }
+  p {
+    font-size: var(--xs-font-size);
+    color: var(--sub-text-color);
+    line-height: var(--lg-line-height);
   }
   .sub_text {
     color: var(--sub-text-color);
-    font-size: var(--mo-xs-font-size);
-    line-height: 1.3;
-    margin-bottom: 12px;
-  }
-  .sub_text br {
-    display: none;
+    font-size: var(--md-font-size);
+    margin-bottom: 22px;
   }
 
   /* 헤더 */
@@ -624,21 +640,11 @@
   h1 {
     width: 120px;
   }
-
-  #gnb {
+  .submenu,
+  #gnb > ul > li > a::after {
     display: none;
   }
-  .header_chips p {
-    display: none;
-  }
-  .mobile_icon {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* =============== 헤더끝 ===============*/
+  /* 헤더 끝 */
 
   /* sec1 시작 */
   .sec1 {
@@ -896,366 +902,54 @@
   }
 }
 
-@media screen and (min-width: 1110px) {
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* 헤더 */
+  h1 {
+    width: 120px;
+  }
+  .submenu {
+    display: none;
+  }
+  #gnb:hover {
+    border: none;
+  }
+  #gnb > ul > li {
+    width: 80px;
+  }
+  #gnb > ul > li a {
+    font-size: 16px;
+  }
+  .header_chips p > a {
+    padding: 6px 12px;
+  }
+  .submenu,
+  #gnb > ul > li > a::after {
+    display: none;
+  }
+
+  /* 헤더 끝 */
+}
+
+@media screen and (min-width: 1110px) and (max-width: 1304px) {
   .sec2 {
     width: 90%;
   }
+  .submenu,
+  #gnb::after {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 1305px) {
+@media screen and (min-width: 1305px) and (max-width: 1440px) {
   .sec2 {
     width: 76%;
+  }
+  .submenu,
+  #gnb::after {
+    display: none;
   }
 }
 
 /* PC */
 @media screen and (min-width: 1441px) {
-  /* 헤더 */
-  header {
-    width: 100%;
-    height: 80px;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-  }
-
-  /* sec2 시작 */
-  .sec2 {
-    width: 1040px;
-    margin: 100px auto;
-  }
-  .box_wrap {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  /* 왼쪽박스 */
-  .left_box {
-    width: 320px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 0;
-    box-sizing: border-box;
-  }
-  .user_info_1 {
-    text-align: center;
-    margin-bottom: 70px;
-    margin: 0 auto;
-  }
-  .user_info_1 p:nth-of-type(1) {
-    font-size: var(--ml-font-size);
-    font-weight: 600;
-    color: var(--main-black);
-    margin-top: 20px;
-    margin-bottom: 8px;
-  }
-  .user_info_1 p:nth-of-type(2) {
-    font-size: var(--ms-font-size);
-    color: var(--sub-text-color);
-    margin-bottom: 16px;
-  }
-  .user_info_1 a:nth-of-type(2) {
-    font-size: var(--xs-font-size);
-    color: var(--sub-text-color);
-    line-height: 2;
-    margin-bottom: 40px;
-  }
-  .user_img {
-    display: inline-block;
-    width: 140px;
-    height: 140px;
-    border-radius: 100%;
-    background: url(../img/mypage/mypage_user.png) no-repeat #f9f9f9 center
-      center;
-  }
-  .user_img img {
-    display: none;
-  }
-  .info_bottom {
-    width: 76%;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-  }
-  .user_info_2,
-  .user_info_3 {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .user_info_2 p {
-    text-align: left;
-    font-size: var(--ms-font-size);
-    font-weight: 500;
-    color: var(--main-black);
-  }
-  .user_info_3 p {
-    font-size: var(--ms-font-size);
-  }
-  .user_info_3 {
-    align-items: flex-end;
-  }
-
-  /* 토글 */
-  .toggle_bar {
-    width: 40px;
-    height: 20px;
-    background-color: var(--point-color);
-    border-radius: 60px;
-    position: relative;
-    top: 0;
-    left: 0;
-    transition: all ease 0.3s;
-  }
-  .toggle_btn {
-    width: 16px;
-    height: 16px;
-    background-color: #ffffff;
-    border-radius: 60px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: all ease 0.3s;
-    cursor: pointer;
-  }
-  .toggle_check:checked ~ .toggle_item > .toggle_bar {
-    background-color: #ff5353;
-    transition: all ease 0.3s;
-  }
-  .toggle_check:checked ~ .toggle_item .toggle_btn {
-    left: 22px;
-    transition: all ease 0.3s;
-  }
-
-  /* 로그아웃 */
-  .logout {
-    margin-top: auto;
-    display: flex;
-  }
-  .logout a {
-    font-size: var(--xs-font-size);
-    color: var(--sub-text-color);
-  }
-  .logout a:first-child::after {
-    content: "세로선";
-    font-size: 0;
-    display: inline-block;
-    width: 1px;
-    height: 14px;
-    background-color: var(--sub-text-color);
-    margin: 0 10px;
-    vertical-align: middle;
-  }
-
-  /* 오른쪽박스 */
-  .right_box {
-    width: 700px;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 80px 96px;
-    box-sizing: border-box;
-  }
-  .mileage {
-    width: 500px;
-    height: 100px;
-    background-color: var(--main-black);
-    border-radius: 10px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 30px;
-    box-sizing: border-box;
-    align-items: center;
-    position: relative;
-  }
-  .mileage p {
-    color: #fff;
-  }
-  .point,
-  .coupon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 190px;
-    height: 60px;
-  }
-  .point > p,
-  .coupon > p {
-    font-size: var(--ms-font-size);
-  }
-  .point img,
-  .coupon img {
-    width: 20px;
-    height: auto;
-    object-fit: contain;
-  }
-  .coupon_num,
-  .point_num {
-    display: flex;
-    gap: 8px;
-    justify-content: flex-end;
-  }
-  .coupon_num p,
-  .point_num p {
-    font-weight: 500;
-    letter-spacing: 0;
-    font-size: var(--lg-font-size);
-    line-height: 0.8;
-  }
-  .right_box .point::after {
-    content: "세로선";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0;
-    display: inline-block;
-    width: 2px;
-    height: 30px;
-    background-color: #fff;
-  }
-
-  /* 예약내역 */
-  .reservation_list_text {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-  .reservation_list_text a {
-    font-size: var(--xs-font-size);
-    color: var(--sub-text-color);
-  }
-  .reservation_list h2,
-  .wish_list h2 {
-    font-size: var(--ml-font-size);
-    margin: 60px 0 30px 0;
-  }
-  .reservation_list > a {
-    font-size: var(--xs-font-size);
-    color: var(--sub-text-color);
-    text-align: end;
-  }
-  .reservation {
-    display: flex;
-    padding: 0 10px;
-    box-sizing: border-box;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-  .reservation:not(.reservation:last-of-type) {
-    margin-bottom: 40px;
-  }
-  .reservation_info_wrap {
-    display: flex;
-  }
-  .reservation_info_wrap img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-  }
-  .reservation_info {
-    height: fit-content;
-    align-items: center;
-    margin-top: 4px;
-    margin-left: 12px;
-  }
-  .reservation_info a,
-  .reservation_info p {
-    font-size: var(--ms-font-size);
-  }
-  .reservation_info a {
-    font-weight: 600;
-    margin-bottom: 10px;
-    display: inline-block;
-  }
-  .reservation_info p {
-    letter-spacing: 0;
-  }
-  .reservation_price {
-    margin-left: auto;
-    text-align: end;
-    margin-top: auto;
-  }
-  .reservation_price p:first-child {
-    font-size: 13px;
-    color: var(--sub-text-color);
-    line-height: 1.5;
-  }
-  .reservation_price p:last-child {
-    font-weight: 700;
-    color: var(--main-black);
-  }
-  .reservation_list .reservation:nth-of-type(1),
-  .reservation_list .reservation:nth-of-type(2) {
-    position: relative;
-  }
-  .reservation::after {
-    content: "구분선";
-    font-size: 0;
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: var(--sub-gray-color);
-  }
-
-  /* ---------------------------------예약내역끝--------------------------------- */
-  /* 위시리스트 */
-  .wish_list {
-    margin-top: 80px;
-  }
-  .wish_list_text {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-  .wish_list_text a {
-    font-size: var(--xs-font-size);
-    color: var(--sub-text-color);
-  }
-  .wish_list_wrap {
-    display: flex;
-    justify-content: space-between;
-  }
-  .wish {
-    width: 150px;
-    height: 240px;
-    display: flex;
-    flex-direction: column;
-  }
-  .wish img {
-    width: 150px;
-    height: 130px;
-    object-fit: cover;
-    margin-bottom: 6px;
-  }
-  .wish p:nth-of-type(1) {
-    font-size: var(--xs-font-size);
-    margin-bottom: 6px;
-  }
-  .wish p:nth-of-type(2),
-  .wish a {
-    font-size: var(--ms-font-size);
-    font-weight: 700;
-    color: var(--main-black);
-  }
-  .wish a {
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
-  .wish p:nth-of-type(2) {
-    margin-top: auto;
-  }
-
-  /* ---------------------------------위시리스트 끝--------------------------------- */
-  /* ---------------------------------sec2 끝--------------------------------- */
 }

@@ -68,7 +68,7 @@
     object-fit: none;
     margin-top: 0;
     position: absolute;
-    transform: translateX(-720px);
+    /* transform: translateX(-720px); */
   }
   .sec1_wrap .left_text {
     top: 50%;
@@ -390,17 +390,21 @@
   h1 {
     width: 120px;
   }
+  .submenu,
+  #gnb > ul > li > a::after {
+    display: none;
+  }
   /* 헤더 끝 */
 
   /* sec1 */
   .sec1_wrap {
-    height: clamp(20vw, 230px, 24vw);
+    height: clamp(26vw, 200px, 30vw);
     background-color: yellowgreen;
   }
   .sec1_wrap img {
     height: 100%;
     object-fit: cover;
-    /* margin-top: 0; */
+    margin-top: 0;
   }
   .sec1_wrap .left_text h2 {
     margin-bottom: 10px;
@@ -411,7 +415,7 @@
     color: #fff;
   }
   .sec1_banner_user {
-    top: 10%;
+    top: 40%;
     gap: 10px;
   }
   .sec1_banner_user img:last-child {

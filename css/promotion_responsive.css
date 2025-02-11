@@ -367,8 +367,7 @@
 
 /* 테블릿 ~ PC */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* 모바일 공통설정 */
-  header,
+  /* 공통설정 */
   .sec1,
   .sec2,
   .sec3,
@@ -378,16 +377,17 @@
     overflow: hidden;
   }
   h2 {
-    font-size: 24px;
+    font-size: 22px;
+  }
+  p {
+    font-size: var(--xs-font-size);
+    color: var(--sub-text-color);
+    line-height: var(--lg-line-height);
   }
   .sub_text {
     color: var(--sub-text-color);
-    font-size: var(--mo-xs-font-size);
-    line-height: 1.3;
-    margin-bottom: 12px;
-  }
-  .sub_text br {
-    display: none;
+    font-size: var(--md-font-size);
+    margin-bottom: 22px;
   }
 
   /* 헤더 */
@@ -403,21 +403,11 @@
   h1 {
     width: 120px;
   }
-
-  #gnb {
+  .submenu,
+  #gnb > ul > li > a::after {
     display: none;
   }
-  .header_chips p {
-    display: none;
-  }
-  .mobile_icon {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* =============== 헤더끝 ===============*/
+  /* 헤더 끝 */
 
   /* sec1 */
   .sec1_wrap {
@@ -461,7 +451,7 @@
     display: none;
   }
   .text_area p {
-    font-size: var(--mo-md-font-size);
+    font-size: var(--ms-font-size);
   }
   .text_area br {
     display: none;
@@ -542,6 +532,29 @@
     color: var(--sub-text-color);
     font-size: var(--mo-xs-font-size);
   }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* 헤더 */
+  h1 {
+    width: 120px;
+  }
+  .submenu {
+    display: none;
+  }
+  #gnb:hover {
+    border: none;
+  }
+  #gnb > ul > li {
+    width: 80px;
+  }
+  #gnb > ul > li a {
+    font-size: 16px;
+  }
+  .header_chips p > a {
+    padding: 6px 12px;
+  }
+  /* 헤더 끝 */
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1440px) {

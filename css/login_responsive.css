@@ -334,6 +334,10 @@
   h1 {
     width: 120px;
   }
+  .submenu,
+  #gnb > ul > li > a::after {
+    display: none;
+  }
   /* 헤더 끝 */
 
   /* sec1 */
@@ -422,6 +426,29 @@
     color: var(--sub-text-color);
     font-size: var(--mo-xs-font-size);
   }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* 헤더 */
+  h1 {
+    width: 120px;
+  }
+  .submenu {
+    display: none;
+  }
+  #gnb:hover {
+    border: none;
+  }
+  #gnb > ul > li {
+    width: 80px;
+  }
+  #gnb > ul > li a {
+    font-size: 16px;
+  }
+  .header_chips p > a {
+    padding: 6px 12px;
+  }
+  /* 헤더 끝 */
 }
 
 /* PC */

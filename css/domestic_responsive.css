@@ -492,6 +492,10 @@
   h1 {
     width: 120px;
   }
+  .submenu,
+  #gnb > ul > li > a::after {
+    display: none;
+  }
   /* 헤더 끝 */
 
   /* sec1 */
