@@ -246,19 +246,6 @@ h1 {
   margin-top: 80px;
   position: relative;
 }
-.sec1_banner_user {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  gap: 100px;
-  position: absolute;
-  top: 20%;
-  right: 11%;
-}
-.sec1_banner_user img:last-child {
-  top: 0%;
-  transform: translateY(-100%);
-}
 .sec1_wrap .right_text {
   position: absolute;
   width: 70%;

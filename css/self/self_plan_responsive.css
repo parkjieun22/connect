@@ -3,16 +3,6 @@
 @import url("./self_plan.css");
 
 /* 모바일 */
-@media screen and (max-width: 656px) {
-  .sec3_best_content {
-    object-fit: cover;
-  }
-  .sec3_best_content img {
-    height: 100%;
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 768px) {
   /* 모바일 공통설정 */
   header,
@@ -91,7 +81,6 @@
   }
   .sec1_wrap .left_text p {
     font-size: 3vw;
-    color: #fff;
   }
   /* --------------------sec1 끝-------------------- */
 
@@ -146,22 +135,27 @@
   }
   .sec3_best_content {
     width: clamp(46vw, 220px, 45vw);
-    height: clamp(30vw, 200px, 40vw);
+    height: clamp(46vw, 220px, 40vw);
   }
   .sec3_best_wrap_text {
-    left: 10px;
+    width: 85%;
+    left: 12px;
     transform: translateY(center);
   }
   .sec3_best_content img {
-    object-fit: fill;
+    height: 100%;
+    object-fit: cover;
   }
   .sec3_best_wrap_text p:last-child {
     /* 가격 */
-    font-size: clamp(10px, 16px, 20px);
+    font-size: clamp(8px, 15px, 50px);
   }
   .sec3_best_wrap_text p:first-child {
     /* 상품명 */
-    font-size: clamp(8px, 14px, 18px);
+    font-size: clamp(6px, 13px, 22px);
+  }
+  .text_box {
+    height: 36%;
   }
   /* --------------------sec3 끝-------------------- */
 
@@ -180,16 +174,17 @@
   }
   .sec4_fav_content {
     width: clamp(130px, 40vw, 220px);
-    height: 200px;
+    height: 220px;
   }
   .sec4_fav_content img {
-    height: 80px;
+    height: 90px;
   }
   .sec4_fav_content .detail_box {
     display: none;
   }
   .sec4_fav_content_text {
-    padding: 20px;
+    padding: 18px;
+    width: 100%;
   }
   .sec4_fav_content_text a > p:first-child {
     margin-bottom: 6px;
@@ -198,10 +193,13 @@
   }
   .sec4_fav_content_text a > p:nth-child(2) {
     font-size: var(--mo-md-font-size);
-    margin: 0 auto;
+    margin-bottom: 0px;
   }
   .sec4_fav_content_text a > p:last-child {
     font-size: var(--mo-price-font-size);
+    margin-bottom: 40px;
+    margin-top: auto;
+    text-align: end;
   }
 
   /* --------------------sec4 끝-------------------- */
@@ -233,6 +231,20 @@
   footer p {
     color: var(--sub-text-color);
     font-size: var(--mo-xs-font-size);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .sec3_best_wrap_text p:last-child {
+    /* 가격 */
+    font-size: 18px;
+  }
+  .sec3_best_wrap_text p:first-child {
+    /* 상품명 */
+    font-size: 16px;
+  }
+  .text_box {
+    height: 30%;
   }
 }
 
@@ -367,9 +379,14 @@
   }
   .sec3_best_wrap {
     width: 100%;
-    gap: 4px;
+    /* gap: 4px; */
     justify-content: space-between;
     margin: 0 auto;
+  }
+  .sec3_best_content:last-child img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
   }
   .sec3_best_content {
     width: clamp(46vw, 220px, 45vw);
@@ -433,6 +450,7 @@
   .sec4_fav_content_text a > p:last-child {
     font-size: 18px;
     text-align: end;
+    margin-bottom: 16px;
   }
   /* --------------------sec4 끝-------------------- */
   /* 푸터 */
