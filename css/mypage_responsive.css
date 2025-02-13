@@ -3,6 +3,15 @@
 @import url("./mypage.css");
 
 /* 모바일 */
+@media screen and (max-width: 425px) {
+  .s-swiper-wrapper {
+    display: block;
+  }
+  .lg-swiper-wrapper,
+  .m-swiper-wrapper {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   /* 모바일 공통설정 */
   header,
@@ -583,11 +592,12 @@
   }
 }
 
-@media screen and (max-width: 845px) {
-  .sm-swiper-wrapper {
+@media screen and (min-width: 426px) and (max-width: 845px) {
+  .m-swiper-wrapper {
     display: block;
   }
-  .lg-swiper-wrapper {
+  .lg-swiper-wrapper,
+  .s-swiper-wrapper {
     display: none;
   }
 }

@@ -628,7 +628,8 @@ main {
   position: relative;
   border-radius: 20px;
 }
-.sm-swiper-wrapper {
+.m-swiper-wrapper,
+.s-swiper-wrapper {
   display: none;
 }
 .swiper {
