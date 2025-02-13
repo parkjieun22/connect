@@ -239,15 +239,18 @@ h1 {
 /*sec1 시작 */
 .sec1_wrap {
   width: 100%;
-  height: clamp(20vw, auto, 24vw);
+  height: 320px;
+  /* height: clamp(20vw, auto, 24vw); */
   position: relative;
+  background-color: #723339;
+  top: 80px;
 }
-.sec1_wrap img {
+/* .sec1_wrap img {
   width: 100%;
   height: fit-content;
   margin-top: 80px;
   position: relative;
-}
+} */
 .sec1_banner_user {
   width: fit-content;
   height: fit-content;
