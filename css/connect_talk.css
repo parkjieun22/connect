@@ -240,10 +240,17 @@ h1 {
 .sec1_wrap {
   width: 100%;
   height: 320px;
-  /* height: clamp(20vw, auto, 24vw); */
   position: relative;
-  background-color: #0c5bb6;
+  /* background-color: #004db3; */
   top: 80px;
+  background-color: hsla(214, 100%, 35%, 1);
+  background-image: radial-gradient(
+      at 100% 100%,
+      hsla(173, 100%, 35%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 22% 2%, hsla(194, 100%, 35%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(239, 26%, 37%, 1) 0px, transparent 50%);
 }
 /* .sec1_wrap img {
   width: 100%;

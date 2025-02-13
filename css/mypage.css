@@ -628,6 +628,9 @@ main {
   position: relative;
   border-radius: 20px;
 }
+.sm-swiper-wrapper {
+  display: none;
+}
 .swiper {
   width: 100%;
   height: 100%;

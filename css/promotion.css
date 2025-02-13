@@ -240,7 +240,7 @@ h1 {
   height: 320px;
   /* height: clamp(20vw, auto, 24vw); */
   position: relative;
-  background-color: #00629f;
+  background-color: #d8eefa;
   top: 80px;
 }
 /* .sec1_wrap img {
@@ -253,7 +253,7 @@ h1 {
   position: absolute;
   width: 70%;
   height: fit-content;
-  color: #fff;
+  color: #003a5c;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -276,7 +276,7 @@ h1 {
 }
 .sec1_wrap .right_text p {
   font-size: var(--lg-font-size);
-  color: #fff;
+  color: #003a5c;
 }
 /* --------------------sec1 끝-------------------- */
 

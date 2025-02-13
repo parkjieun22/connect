@@ -583,6 +583,15 @@
   }
 }
 
+@media screen and (max-width: 845px) {
+  .sm-swiper-wrapper {
+    display: block;
+  }
+  .lg-swiper-wrapper {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 887px) and (max-width: 1024px) {
   .left_box {
     width: 100%;
