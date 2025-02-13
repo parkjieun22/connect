@@ -186,17 +186,26 @@ h1 {
 /* 모바일 햄버거 버튼 */
 #hamburger-menu {
   z-index: 9999;
-  display: none;
   position: absolute;
   top: 80px;
   right: 0px;
   width: 260px;
-  height: 323px;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.95);
   padding: 50px 0;
   box-sizing: border-box;
-  border-radius: 30px 0 0 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+.hamburger-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+#hamburger-icon.active #hamburger-menu {
+  visibility: none;
+}
+
 #hamburger-menu ul {
   width: 60%;
   margin: 0 auto;
