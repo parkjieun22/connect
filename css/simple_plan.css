@@ -363,24 +363,6 @@ h1 {
 .sec3_menu_wrap h2 {
   margin-bottom: 26px;
 }
-.sec3_menu {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-.sec3_menu a {
-  width: fit-content;
-  font-size: var(--md-font-size);
-  padding: 10px 20px;
-  background-color: var(--sub-text-color);
-  color: #fff;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-.sec3_menu a:hover {
-  background-color: var(--point-color);
-  color: #fff;
-}
 .sec3_best_wrap {
   width: 1100px;
   height: fit-content;

@@ -81,15 +81,15 @@
   /* sec2 */
   .sec2_wrap {
     width: 90%;
-    margin: 100px auto;
+    margin: 60px auto;
     gap: 20px;
   }
   .sec2_wrap h2 {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .sec2_chips_wrap {
     gap: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .sec2_chips_wrap a {
     padding: 10px 14px;
