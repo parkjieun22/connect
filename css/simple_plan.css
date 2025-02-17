@@ -379,12 +379,13 @@ h1 {
   display: flex;
   justify-content: center;
 }
-.sec3_best_content:last-child img {
+/* .sec3_best_content:last-child img {
   height: 100%;
   object-fit: cover;
-}
+} */
 .sec3_best_content img {
-  width: 100%;
+  width: 540px;
+  height: 100%;
   transition: 0.5s;
   object-fit: cover;
   object-position: center center;

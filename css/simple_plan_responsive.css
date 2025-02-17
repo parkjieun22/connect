@@ -381,10 +381,10 @@
     justify-content: space-between;
     margin: 0 auto;
   }
-  .sec3_best_content:last-child img {
+  /* .sec3_best_content:last-child img {
     height: 100%;
     object-fit: cover;
-  }
+  } */
   .sec3_best_content {
     width: clamp(46vw, 220px, 45vw);
     height: clamp(30vw, 200px, 40vw);

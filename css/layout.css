@@ -407,8 +407,10 @@ h1 {
   justify-content: flex-start;
   transition: 0.2s;
   margin-top: 220px;
+  flex-direction: column;
 }
 .sec3_chips_wrap > a {
+  width: fit-content;
   padding: 10px 34px;
   border: 1px solid var(--sub-text-color);
   border-radius: 50px;
