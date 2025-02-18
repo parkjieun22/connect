@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="icon" href="../img/connet_pavicon.ico" />
+
+    <!-- 제이쿼리 -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/join.css" />
+    <link rel="stylesheet" href="../css/join_responsive.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="con">
+          <!-- 로고 -->
+          <h1>
+            <a href="/"><img src="../img/connect_logo.svg" alt="로고" /></a>
+          </h1>
+          <!-- 모바일 햄버거 메뉴 -->
+          <nav id="hamburger-menu">
+            <ul>
+              <!-- 메뉴1 -->
+              <li>
+                <a href="./connect_talk.html">커넥트톡</a>
+                <ul class="submenu">
+                  <li><a href="#">동행 구하기</a></li>
+                  <li><a href="#">교통/숙소 질문</a></li>
+                  <li><a href="#">일정 질문</a></li>
+                  <li><a href="#">맛집/핫플 추천</a></li>
+                  <li><a href="#">SOS</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴2 -->
+              <li>
+                <a href="./self_plan.html">셀프플랜</a>
+                <ul class="submenu">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">미주/캐나다</a></li>
+                  <li><a href="#">호주/뉴질랜드</a></li>
+                  <li><a href="#">중남미</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴3 -->
+              <li>
+                <a href="./simple_plan.html">간편플랜</a>
+                <ul class="submenu">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">미주/캐나다</a></li>
+                  <li><a href="#">호주/뉴질랜드</a></li>
+                  <li><a href="#">중남미</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴4 -->
+              <li>
+                <a href="./domestic_travel.html">국내여행</a>
+                <ul class="submenu">
+                  <li><a href="#">제주도</a></li>
+                  <li><a href="#">울릉도/독도</a></li>
+                  <li><a href="#">내륙</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴5 -->
+              <li>
+                <a href="./promotion.html">프로모션</a>
+                <ul class="submenu">
+                  <li><a href="#">진행 중인 이벤트</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- pc 기본 메뉴 -->
+          <nav id="gnb">
+            <ul>
+              <!-- 메뉴1 -->
+              <li>
+                <a href="./connect_talk.html">커넥트톡</a>
+                <ul class="submenu">
+                  <li><a href="#">동행 구하기</a></li>
+                  <li><a href="#">교통/숙소 질문</a></li>
+                  <li><a href="#">일정 질문</a></li>
+                  <li><a href="#">맛집/핫플 추천</a></li>
+                  <li><a href="#">SOS</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴2 -->
+              <li>
+                <a href="./self_plan.html">셀프플랜</a>
+                <ul class="submenu">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">미주/캐나다</a></li>
+                  <li><a href="#">호주/뉴질랜드</a></li>
+                  <li><a href="#">중남미</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴3 -->
+              <li>
+                <a href="./simple_plan.html">간편플랜</a>
+                <ul class="submenu">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">미주/캐나다</a></li>
+                  <li><a href="#">호주/뉴질랜드</a></li>
+                  <li><a href="#">중남미</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴4 -->
+              <li>
+                <a href="./domestic_travel.html">국내여행</a>
+                <ul class="submenu">
+                  <li><a href="#">제주도</a></li>
+                  <li><a href="#">울릉도/독도</a></li>
+                  <li><a href="#">내륙</a></li>
+                </ul>
+              </li>
+
+              <!-- 메뉴5 -->
+              <li>
+                <a href="./promotion.html">프로모션</a>
+                <ul class="submenu">
+                  <li><a href="#">진행 중인 이벤트</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- 아이콘 -->
+          <div class="header_chips">
+            <p><a href="../sub/login.html">로그인</a></p>
+            <p><a href="../sub/mypage.html">마이페이지</a></p>
+            <!-- <p><a href="#">예약내역</a></p> -->
+          </div>
+          <div class="mobile_icon">
+            <a href="../sub/login.html"
+              ><img
+                src="../img/login.svg"
+                width="24px"
+                style="height: auto"
+                alt="로그인"
+            /></a>
+            <a href="../sub/mypage.html"
+              ><img
+                src="../img/user.svg"
+                width="24px"
+                style="height: auto"
+                alt="마이페이지"
+            /></a>
+            <a href="#" id="hamburger-icon"
+              ><img
+                src="../img/menu.svg"
+                width="24px"
+                style="height: auto"
+                alt="메뉴"
+            /></a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="sec1">
+          <h2>회원가입</h2>
+          <p>커넥트의 회원이 되어 다양한 혜택과 정보를 받아보세요 💙</p>
+        </section>
+
+        <section class="sec2">
+          <h3>약관동의</h3>
+          <div class="all_agree_check">
+            <p><input type="checkbox" checked />전체 약관 동의</p>
+          </div>
+          <div class="agree_check_use">
+            <p>
+              <input type="checkbox" checked /><span>[필수]</span>&nbsp;
+              이용약관
+            </p>
+            <label for="agree_check_use">
+              <textarea
+                name="agree_check_use"
+                id="agree_check_use"
+                rows="10"
+                cols="40"
+                wrap="soft"
+                disabled
+                readonly
+              >
+제1조(목적) 이 약관은 커넥트(전자상거래 사업자)가 운영하는
+              </textarea>
+            </label>
+          </div>
+          <div class="agree_check_personal">
+            <p>
+              <input type="checkbox" checked /><span>[필수]</span>&nbsp;개인정보
+              수집 및 이용 동의
+            </p>
+            <label for="agree_check_personal">
+              <textarea
+                name="agree_check_personal"
+                id="agree_check_personal"
+                rows="10"
+                cols="40"
+                wrap="soft"
+                disabled
+                readonly
+              >
+네이버는 www.naver.com을 비롯한 네이버</textarea
+              >
+            </label>
+          </div>
+          <div class="agree_check_marketing">
+            <p>
+              <input type="checkbox" checked /><span>[선택]</span>&nbsp;맞춤
+              마케팅을 위한 개인정보 수집 및 이용 동의
+            </p>
+            <label for="agree_check_marketing">
+              <textarea
+                name="agree_check_marketing"
+                id="agree_check_marketing"
+                rows="10"
+                cols="40"
+                wrap="soft"
+                disabled
+                readonly
+              >
+네이버는 www.naver.com을 비롯한 네이버 도메인의</textarea
+              >
+            </label>
+          </div>
+        </section>
+
+        <section class="sec3">
+          <h3>가입정보</h3>
+          <form action="#" method="post" autocomplete="on" novalidate>
+            <!-- 아이디 -->
+            <div class="id">
+              <label for="user_id"><span>아이디</span></label>
+              <input
+                type="text"
+                id="user_id"
+                name="user_id"
+                placeholder="4~20자의 영문 소문자와 숫자를 포함해 주세요"
+                required
+                autofocus
+              />
+            </div>
+
+            <!-- 비밀번호 -->
+            <div class="password">
+              <div>
+                <label for="user_pw"><span>비밀번호</span></label>
+                <input
+                  type="password"
+                  id="user_pw"
+                  name="user_pw"
+                  required
+                  autocomplete="off"
+                  minlength="8"
+                  maxlength="16"
+                  placeholder="8~12자의 영문, 숫자를 포함해 주세요"
+                />
+              </div>
+
+              <!-- 비밀번호 확인 -->
+              <div>
+                <label for="user_pw_check"><span>비밀번호 확인</span></label>
+                <input
+                  type="password"
+                  id="user_pw_check"
+                  name="user_pw_check"
+                  required
+                  autocomplete="off"
+                  minlength="8"
+                  maxlength="16"
+                  placeholder="비밀번호를 다시 한번 입력해 주세요"
+                />
+              </div>
+            </div>
+
+            <!-- 핸드폰 번호 -->
+            <div class="phone">
+              <label for="phone"><span>전화번호</span></label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="휴대폰 번호 입력 ‘-’ 제외 11자리를 입력해주세요"
+              />
+            </div>
+
+            <!-- 이메일 -->
+            <div class="email">
+              <label for="email"><span>이메일</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="@를 포함한 전체 이메일 주소를 입력해주세요"
+              />
+            </div>
+          </form>
+        </section>
+
+        <section class="sec4">
+          <h3>개인정보</h3>
+          <form action="#" method="post">
+            <!-- 이름 -->
+            <div class="name">
+              <p>이름</p>
+              <input type="text" name="user_name" id="user_name" />
+            </div>
+            <!-- 생년월일 -->
+            <div class="birth">
+              <p>생년월일</p>
+              <input type="date" />
+            </div>
+            <!-- 성별 -->
+            <div class="gender">
+              <p>성별</p>
+              <input type="radio" name="gender" checked />
+              <label for="gender" id="female">여성</label>
+
+              <input type="radio" name="gender" />
+              <label for="gender" id="male">남성</label>
+            </div>
+          </form>
+        </section>
+
+        <section class="sec5">
+          <button type="button">가입하기</button>
+        </section>
+      </main>
+
+      <!-- 푸터 -->
+      <footer>
+        <div class="footer_wrap">
+          <a href="#"
+            ><img src="../img/connect_logo_gray.png" alt="connect_logo_gray"
+          /></a>
+          <div class="footer_text_wrap">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">위치정보 이용약관</a>
+            <a href="#">접근성 안내</a>
+            <a href="#">공지사항</a>
+            <a href="#">사이버 윤리실</a>
+            <a href="#">고객센터</a>
+          </div>
+          <p>&copy; Connect Corp. All rights reserved</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- js -->
+    <script src="../js/hamburger_menu.js"></script>
+  </body>
+</html>
