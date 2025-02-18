@@ -240,7 +240,6 @@ h1 {
   width: 100%;
   height: 320px;
   position: relative;
-  /* background-color: #004db3; */
   top: 80px;
   background-color: hsla(214, 100%, 35%, 1);
   background-image: radial-gradient(
@@ -324,6 +323,7 @@ h1 {
   color: var(--sub-text-color);
   margin-bottom: 20px;
 }
+
 /* ---------------------상단 메뉴 끝--------------------- */
 
 .post_box {
@@ -350,7 +350,8 @@ h1 {
 }
 .post_user_img img {
   position: absolute;
-  width: 55%;
+  /* width: 55%; */
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -396,6 +397,32 @@ h1 {
   transition: 0.5s;
 }
 .post_box:nth-child(even):hover .post_box_button {
+  transform: scale(1.05);
+}
+
+/* 서브 컨텐츠 개별 설정 */
+.content2 .post_box:nth-child(even) .post_box_button,
+.content3 .post_box:nth-child(even) .post_box_button,
+.content4 .post_box:nth-child(even) .post_box_button {
+  background-color: var(--sub-text-color);
+  transition: 0.5s;
+}
+.content2 .post_box:nth-child(even):hover .post_box_button,
+.content3 .post_box:nth-child(even):hover .post_box_button,
+.content4 .post_box:nth-child(even):hover .post_box_button {
+  transform: none;
+}
+.content5 .post_box:nth-child(odd) .post_box_button {
+  background-color: #ff5353;
+  transition: 0.5s;
+}
+.content5 .post_box:nth-child(even) .post_box_button {
+  background-color: var(--sub-text-color);
+}
+.content5 .post_box:nth-child(even):hover .post_box_button {
+  transform: none;
+}
+.content5 .post_box:nth-child(odd):hover .post_box_button {
   transform: scale(1.05);
 }
 

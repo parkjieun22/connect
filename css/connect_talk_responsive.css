@@ -138,6 +138,48 @@
   .post_box_text h3 {
     font-size: var(--ml-font-size);
   }
+
+  /* content2 */
+  .content2 .post_box,
+  .content3 .post_box,
+  .content4 .post_box,
+  .content5 .post_box {
+    flex-direction: row;
+  }
+  .content2 .post_user_img,
+  .content3 .post_user_img,
+  .content4 .post_user_img,
+  .content5 .post_user_img {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+  }
+  .content2 .post_box_text,
+  .content3 .post_box_text,
+  .content4 .post_box_text,
+  .content5 .post_box_text {
+    cursor: pointer;
+  }
+  .content2 .post_box_text h3,
+  .content3 .post_box_text h3,
+  .content4 .post_box_text h3,
+  .content5 .post_box_text h3 {
+    font-size: var(--ms-font-size);
+  }
+  .content2 .post_box_button,
+  .content3 .post_box_button,
+  .content4 .post_box_button,
+  .content5 .post_box_button {
+    display: none;
+  }
+  .content2 .post_box_chips,
+  .content3 .post_box_chips,
+  .content4 .post_box_chips,
+  .content5 .post_box_chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   /* --------------------sec2 끝-------------------- */
 
   /* 페이지버튼 */
