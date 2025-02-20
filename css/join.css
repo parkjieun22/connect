@@ -237,6 +237,17 @@ main {
   padding: 100px 0;
 }
 
+/* 약관 폰트 */
+#agree_check_personal,
+#agree_check_use,
+#agree_check_marketing,
+#date {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: var(--xs-font-size);
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+}
+
 /* sec1 시작 */
 .sec1 {
   top: 80px;
@@ -319,22 +330,49 @@ main {
   margin-bottom: 40px;
 }
 .sec3 span {
-  color: var(--main-black);
+  color: var(--sub-text-color);
   font-size: var(--ms-font-size);
 }
 .sec3 .password {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 .sec3 .password div {
+  width: 46%;
   display: flex;
   flex-direction: column;
 }
 .sec3 .id,
 .sec3 .phone,
 .sec3 .email {
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+.sec3 label {
+  margin-bottom: 10px;
+}
+.sec3 .id,
+.sec3 .password,
+.sec3 .phone {
+  margin-bottom: 40px;
+}
+.sec3 input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding: 1px 9px 0 20px;
+  border: 1px solid var(--sub-gray-color);
+  font-size: var(--xs-font-size);
+  box-sizing: border-box;
+}
+.sec3 input::placeholder {
+  color: var(--sub-text-color);
+}
+.sec3 input:focus {
+  outline: none;
+  border: 1px solid var(--sub-text-color);
 }
 /* ------------------------------sec3 끝------------------------------ */
 
@@ -354,11 +392,94 @@ main {
   font-weight: 600;
   margin-bottom: 40px;
 }
-.sec4 p {
-  color: var(--main-black);
+.sec4 span {
+  color: var(--sub-text-color);
   font-size: var(--ms-font-size);
 }
+.sec4 input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding: 1px 9px 0 20px;
+  border: 1px solid var(--sub-gray-color);
+  font-size: var(--xs-font-size);
+  margin-top: 10px;
+  color: var(--sub-text-color);
+  box-sizing: border-box;
+}
+.sec4 input::placeholder {
+  color: var(--sub-text-color);
+}
+.sec4 input:focus {
+  outline: none;
+  border: 1px solid var(--sub-text-color);
+}
+.sec4 .gender {
+  display: flex;
+  margin-top: 40px;
+}
+.sec4 .name,
+.sec4 .birth {
+  margin-bottom: 40px;
+}
+.sec4 input {
+  color: var(--sub-text-color);
+}
+.sec4 .gender {
+  display: flex;
+  flex-direction: column;
+}
+.sec4 .button_box {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+}
+.sec4 .button_box button {
+  background-color: #fff;
+  border: 1px solid var(--sub-gray-color);
+  width: 100%;
+  height: 50px;
+  color: var(--sub-text-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.sec4 .button_box button:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.sec4 .button_box button:last-child {
+  border-radius: 0 10px 10px 0;
+  border-left: 0;
+}
+.sec4 .button_box button:hover {
+  border: 1px solid var(--point-color);
+  color: var(--point-color);
+}
 /* ------------------------------sec4 끝------------------------------ */
+
+/* sec5 */
+.sec5 {
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.sec5 button {
+  width: 440px;
+  height: 60px;
+  background-color: var(--point-color);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: var(--md-font-size);
+  font-weight: 500;
+}
+.sec5 button:hover {
+  background-color: var(--point-color-deep);
+}
+/* ------------------------------sec5 끝------------------------------ */
 
 /* 푸터시작 */
 footer {

@@ -62,7 +62,7 @@
     width: 100%;
     height: 600px;
     position: relative;
-    background-color: yellowgreen;
+    background-color: #fff;
   }
   .sec1 > video {
     position: absolute; /* 절대 위치 */
@@ -516,7 +516,7 @@
     width: 100%;
     height: 600px;
     position: relative;
-    background-color: yellowgreen;
+    background-color: #fff;
   }
   .sec1 > video {
     position: absolute; /* 절대 위치 */
@@ -947,7 +947,7 @@
     width: 100%;
     height: 600px;
     position: relative;
-    background-color: yellowgreen;
+    background-color: #fff;
   }
   .sec1 > video {
     position: absolute; /* 절대 위치 */
