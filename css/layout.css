@@ -88,7 +88,6 @@ h1 {
   font-size: 0;
   display: block;
   position: absolute;
-  bottom: -50;
   width: 0;
   height: 2px;
   background-color: var(--point-color);
@@ -374,7 +373,6 @@ h1 {
   width: 430px;
   height: 338px;
   object-fit: cover;
-  transform: translate(50% 50%);
   margin-bottom: 22px;
 }
 .sec3_right_wrap {

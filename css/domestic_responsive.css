@@ -141,7 +141,6 @@
   .sec3_best_wrap_text {
     width: 85%;
     left: 12px;
-    transform: translateY(center);
   }
   .sec3_best_content img {
     height: 100%;
@@ -394,7 +393,6 @@
   }
   .sec3_best_wrap_text {
     left: 20px;
-    transform: translateY(center);
   }
   .sec3_best_wrap_text p:last-child {
     /* 가격 */
@@ -608,7 +606,6 @@
   }
   .sec3_best_wrap_text {
     left: 20px;
-    transform: translateY(center);
   }
   .sec3_best_wrap_text p:last-child {
     /* 가격 */

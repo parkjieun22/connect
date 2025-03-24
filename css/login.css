@@ -88,7 +88,6 @@ h1 {
   font-size: 0;
   display: block;
   position: absolute;
-  bottom: -50;
   width: 0;
   height: 2px;
   background-color: var(--point-color);
@@ -293,7 +292,7 @@ label[for="user_id"] input {
   font-weight: 300;
 }
 label[for="user_id"] input:focus {
-  color: var(var(--point-color));
+  color: var(--point-color);
 }
 
 /* 비밀번호 칸 */
@@ -313,7 +312,7 @@ label[for="user_pw"] input {
   font-weight: 300;
 }
 label[for="user_pw"] input:focus {
-  color: var(var(--point-color));
+  color: var(--point-color);
 }
 
 /* 로그인상태유지 */
