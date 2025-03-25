@@ -179,8 +179,8 @@
     margin-top: 40px;
   }
   .footer_wrap {
-    height: 180px;
-    padding: 60px;
+    height: 110px;
+    padding: 40px;
     flex-direction: column;
   }
   .footer_wrap img {
@@ -190,7 +190,7 @@
   .footer_text_wrap {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
   }
   .footer_text_wrap a {
     color: var(--sub-text-color);
@@ -378,8 +378,8 @@
 
   /* 푸터 */
   .footer_wrap {
-    height: 180px;
-    padding: 60px;
+    height: 110px;
+    padding: 40px;
     flex-direction: column;
   }
   .footer_wrap img {
@@ -565,22 +565,22 @@
 
   /* 푸터 */
   .footer_wrap {
-    height: 180px;
-    padding: 60px;
+    height: 110px;
+    padding: 40px;
     flex-direction: column;
   }
   .footer_wrap img {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
   }
   .footer_text_wrap {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
   }
   .footer_text_wrap a {
     color: var(--sub-text-color);
-    font-size: var(--mo-xs-font-size);
+    font-size: var(--xs-font-size);
   }
   footer p {
     color: var(--sub-text-color);
